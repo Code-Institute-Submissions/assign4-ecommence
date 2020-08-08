@@ -155,7 +155,7 @@ body{
     justify-content: center;
     transform: scale(0);
     transition:0.5s ease;
-    background:rgba(0,0,0);
+    background:rgba(222,183,135, 0.98);
     border-radius: 50%;
     width: 200vw;
     height: 200vh;
@@ -170,7 +170,7 @@ body{
 }
 .nav-area .nav-menu >div >div >ul>li{
     list-style: none;
-    color:white;
+    color:brown;
     font-size: 24px;
     padding: 16px;
 }

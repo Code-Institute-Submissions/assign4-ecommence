@@ -1,35 +1,15 @@
-{%extends 'base.template.html'%}
-{%load static %}
-{%block title%}Home{%endblock%}
+{%extends 'base.template.html'%} 
+{%load static %} 
+{%block title%}Home{%endblock%} 
 {%block content%}
-    <div class="nav-area">
-        <h2 id="left-nav">Classic Books Store</h2>
-        <a href="#" id="left-cart">Shopping Cart ({{number_of_items}})</a>
-        <input type="checkbox" class="books-menu">
-        <div class="nav-icon">
-            <div></div>
-        </div>
-        <div class="nav-menu">
-            <div>
-                <div>
-                    <ul>
-                        <li><a href="{% url 'index' %}">Home</a></li>
-                        <li><a href="{% url 'books' %}">Books</a></li>
-                        <li><a href="{% url 'carts' %}">Cart</a></li>
-                        <li><a href="#">Login</a></li>
-                    </ul>
-                </div>
-            </div>  
-        </div>
-    </div>
-    <div class="banner-area">
-        <div class="wrapper banner-text">
-            <h1>Welcome to Classic Books Treasure </h1>
-            <p>A webpage for Classic Books Collection Lover.</p>
-            <p>Click <span class="underline">below</span> to begin.</p>
-            <a href="{% url 'books' %}"class="btn-area">Explore</a>
-        </div>
-    </div>
-    
- {%endblock%}  
-  
+
+<div class="banner-area">
+  <div class="wrapper banner-text">
+    <h1>Welcome to Classic Books Treasure</h1>
+    <p>A webpage for Classic Books Collection Lover.</p>
+    <p>Click <span class="underline">below</span> to begin.</p>
+    <a href="{% url 'books' %}" class="btn-area">Explore</a>
+  </div>
+</div>
+
+{%endblock%}

@@ -25,7 +25,7 @@ SECRET_KEY = 'puio=xoj&sxx3k21o3o838e_-7sq@l1a-+llj1zm2%c1k&p6*u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*","ecommence-books.herokuapp.com"]
+ALLOWED_HOSTS = ["*", "ecommence-books.herokuapp.com"]
 
 
 # Application definition
@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'books',
     'carts',
 ]
@@ -69,9 +73,42 @@ TEMPLATES = [
         },
     },
 ]
+# Authentication backends (or how we are going to do login and logout)
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+SITE_ID = 1
+
+# we are going to allow user to login by their user name or email
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+
+# does the user too to provide an email address to register
+ACCOUNT_EMAIL_REQUIRED = True
+
+# does the user needs to verify his email
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+
+# does the user needs to enter his password twice during regisration
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+
+# min length of user name
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+
+# which url to go for the user to login
+LOGIN_URL = '/accounts/login/'
+
+# which url to go to when the user has successfully logged in
+LOGIN_REDIRECT_URL = '/success'
 
 WSGI_APPLICATION = 'BooksTreasureProject.wsgi.application'
 
+# simulate Django to send out emails
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases

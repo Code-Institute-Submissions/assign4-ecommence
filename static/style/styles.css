@@ -40,6 +40,17 @@ body{
     text-align:center;
     height:100%;
 }
+.banner-text h1{
+    font-size: 2.7rem;
+    background: linear-gradient(180deg,rgba(255,255,255,0) 0%, rgb(53, 116, 53,0.99) 100%);
+  
+}
+
+.banner-text p{
+    font-size: 1.3rem;
+    background: linear-gradient(180deg,rgba(255,255,255,0) 50%, rgb(53, 116, 53) 50%);
+  
+}
 /*button css*/
 .btn-area{
     display: inline-block;
@@ -179,4 +190,7 @@ body{
     text-decoration: none;
     transition : color 0.5s ease;
 }
-
+/*underline css*/
+.underline{
+    text-decoration: underline;
+}

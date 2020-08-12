@@ -21,7 +21,10 @@ import carts.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('', books.views.index, name="index"),
-    path('books/', books.views.all_books, name="books"),
+    path('books/', books.views.index, name="index"),
+    path('books/all', books.views.all_books, name="books"),
+    path('books/create', books.views.create_book, name="create_book"),
+    path('books/authors', books.views.all_authors, name="all_authors"),
+    path('books/authors/create', books.views.create_author, name="create_author"),
     path('carts/', carts.views.cart, name="carts")
 ]

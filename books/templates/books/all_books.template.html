@@ -1,4 +1,4 @@
-{%extends 'base.template.html'%} 
+{% extends 'base.template.html'%} 
 {%load static %} 
 {%block title%}All Books{%endblock%} 
 {%block content%}
@@ -7,10 +7,12 @@
         <div class="row">
             <h1>List of Available Books</h1>
             <ul>
-                {{%for book in books}}
+                {%for book in books%}
                 <li>
                     {{book.title}}
-                </li>    
+                    <a class="btn btn-primary btn-sm" href="{% url 'update_book' book_id=book.id %}">Update</a>
+                </li>   
+                {%endfor%} 
             </ul>
         </div>
     </div>

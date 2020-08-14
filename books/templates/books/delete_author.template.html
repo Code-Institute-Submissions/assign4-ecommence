@@ -1,0 +1,13 @@
+{% extends 'base.template.html'%} 
+{%load static %} 
+{%block title%}Delete Author{%endblock%} 
+{%block content%}
+    <h1>Deleting Author{{author.first_name}}{{author.last_name}}</h1>
+    <p>Confirm to Proceed?</p>
+    <form method="POST">
+        {$csrf_token %}
+        <input type="Submit" value="Yes"/>
+        <a href="{% url 'all_authors'%}">Cancel</a>
+    </form>
+
+%endblock%}

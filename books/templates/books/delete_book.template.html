@@ -1,0 +1,13 @@
+{% extends 'base.template.html'%} 
+{%load static %} 
+{%block title%}Delete Book{%endblock%} 
+{%block content%}
+    <h1>Deleting the book with title of {{book.title}}</h1>
+    <p>Confirm to Proceed?</p>
+    <form method="POST">
+        {$csrf_token %}
+        <input type="Submit" value="Yes"/>
+        <a href="{% url 'books'%}">Cancel</a>
+    </form>
+
+%endblock%}

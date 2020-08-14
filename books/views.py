@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from django.shortcuts import get_object_or_404
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Book, Author
 from .forms import BookForm, AuthorForm
@@ -17,9 +18,16 @@ def create_book(request):
     if request.method == "POST":
         # Submission data from User
         form = BookForm(request.POST)
-        form.save()
-        # show in all books view page
-        return redirect(reverse(all_books))
+        #valid form
+        if form.is_valid():
+            form.save()
+            messages.success(request,"New Book has been added to the list!")
+            # show in all books view page
+            return redirect(reverse(all_books))
+        else:
+            return render(request, 'books/create_book.template.html', {
+            'form': form
+        })
     else:
         # create a new book form
         form = BookForm()
@@ -72,9 +80,16 @@ def create_author(request):
     if request.method == "POST":
         # Submission data from User
         form = AuthorForm(request.POST)
-        form.save()
-        # show in all books view page
-        return redirect(reverse(all_authors))
+        if form.is_valid():
+            form.save()
+            messages.success(request,"New Author has been Added to the list!")
+            # show in all books view page
+            return redirect(reverse(all_authors))
+        else:
+            form = AuthorForm()
+            return render(request, 'books/create_author.template.html', {
+                'form': form
+            })
     else:
         # create a new book form
         form = AuthorForm()

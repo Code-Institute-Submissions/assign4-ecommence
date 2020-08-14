@@ -1,11 +1,12 @@
 {% extends 'base.template.html'%} 
+{% load crispy_forms_tags %}
 {%load static %} 
 {%block title%}Update Book{%endblock%} 
 {%block content%}
     <h1>Update Book for title :{{book.title}}</h1>
     <form method="POST">
         {%csrf_token %}
-        {{form.as_p}}
+        {{form|crispy}}
         <input type="submit" name="Update Book"/>
     </form>
 

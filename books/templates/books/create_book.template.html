@@ -1,11 +1,12 @@
 {% extends 'base.template.html'%} 
+ {% load crispy_forms_tags %}
 {%load static %} 
 {%block title%}Create Book{%endblock%} 
 {%block content%}
     <h1>Create A New Book</h1>
     <form method="POST">
         {%csrf_token%}
-        {{form.as_p}}
+        {{form|crispy}}
         <input type="Submit"/>
     </form>
 

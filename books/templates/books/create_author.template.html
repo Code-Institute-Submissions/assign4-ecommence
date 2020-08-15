@@ -1,12 +1,13 @@
 {% extends 'base.template.html'%} 
-{% load crispy_forms_tags %}
+
 {%load static %} 
 {%block title%}Create Author{%endblock%} 
+{% load crispy_forms_tags %}
 {%block content%}
     <h1>Create A New Author</h1>
     <form method="POST">
         {%csrf_token%}
-        {{form|crispy}}
+        {{ form|crispy }}
         <input type="Submit"/>
     </form>
 

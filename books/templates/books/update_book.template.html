@@ -6,7 +6,7 @@
     <h1>Update Book for title :{{book.title}}</h1>
     <form method="POST">
         {%csrf_token %}
-        {{form|crispy}}
+        {{ form|crispy }}
         <input type="submit" name="Update Book"/>
     </form>
 

@@ -30,10 +30,19 @@
         <div>
           <div>
             <ul>
-              <li><a href="{% url 'index' %}">Home</a></li>
-              <li><a href="{% url 'books' %}">Books</a></li>
-              <li><a href="{% url 'carts' %}">Cart</a></li>
-              <li><a href="#">Login</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'books' %}">Books</a></li>
+                <li><a href="{% url 'carts' %}">Cart</a></li>
+                {% if user.is_authenticated and user.is_superuser %}
+                <li><a href="{% url 'create_book' %}">Add A book</a></li>
+                <li><a href="{% url 'create_author' %}">Add A Author</a></li>
+                {% endif %}
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
+                {% else %}
+                <li><a href="{% url 'account_login' %}">Login</a></li>
+                <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+                {% endif %}
             </ul>
           </div>
         </div>

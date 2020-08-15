@@ -12,7 +12,7 @@ from .forms import BookForm, AuthorForm
 def index(request):
     return render(request, 'books/index.template.html')
 
-
+@ login_required
 # create books page
 def create_book(request):
     if request.method == "POST":

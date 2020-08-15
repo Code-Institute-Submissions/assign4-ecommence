@@ -12,15 +12,18 @@ from .forms import BookForm, AuthorForm
 def index(request):
     return render(request, 'books/index.template.html')
 
-@ login_required
+
 # create books page
+@ login_required
 def create_book(request):
     if request.method == "POST":
         # Submission data from User
         form = BookForm(request.POST)
         #valid form
         if form.is_valid():
-            form.save()
+            book=form.save(commit=False)
+            book.owner=request.user
+            book.save()
             messages.success(request,"New Book has been added to the list!")
             # show in all books view page
             return redirect(reverse(all_books))
@@ -34,7 +37,12 @@ def create_book(request):
         return render(request, 'books/create_book.template.html', {
             'form': form
         })
-
+# view book page
+def view_book(request, book_id):
+    book = get_object_or_404(Book, pk=book_id)
+    return render(request, 'books/view_books.template.html', {
+        "book": book
+    })
 # all books page
 
 
@@ -46,24 +54,26 @@ def all_books(request):
 
 # update books page
 
-
+@ login_required
 def update_book(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
     # Submitted form
     if request.method == "POST":
         form = BookForm(request.POST, instance=book)
+        
         form.save()
         return redirect(reverse(all_books))
     else:
         # extract the data from database
         form = BookForm(instance=book)
-        return render(request, 'books/upate_book.template.html', {
+        return render(request, 'books/update_book.template.html', {
             'form': form
         })
 
 # delete books page
 
 
+@ login_required
 def delete_book(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
     # submission
@@ -75,7 +85,7 @@ def delete_book(request, book_id):
             'book': book})
 # create authors page
 
-
+@ login_required
 def create_author(request):
     if request.method == "POST":
         # Submission data from User
@@ -103,12 +113,13 @@ def create_author(request):
 def all_authors(request):
     all_authors = Author.objects.all()
     return render(request, 'books/all_authors.template.html', {
-        'authors': all_authors
+        'authors': all_authors,
+        'books':all_books
     })
 
 # update authors page
 
-
+@ login_required
 def update_author(request, author_id):
     author = get_object_or_404(Author, pk=author_id)
     # submitted form
@@ -125,7 +136,7 @@ def update_author(request, author_id):
                       })
 # delete author page
 
-
+@ login_required
 def delete_author(request, author_id):
     author = get_object_or_404(Author, pk=author_id)
     # submission

@@ -8,6 +8,7 @@ urlpatterns = [
     path('create', books.views.create_book, name="create_book"),
     path('update/<book_id>', books.views.update_book, name="update_book"),
     path('delete/<book_id>', books.views.delete_book, name="delete_book"),
+    path('view/<book_id>',books.views.view_book,name="view_book"),
     path('authors/', books.views.all_authors, name="all_authors"),
     path('authors/create', books.views.create_author, name="create_author"),
     path('authors/update/<author_id>',

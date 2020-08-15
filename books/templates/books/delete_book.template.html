@@ -5,9 +5,9 @@
     <h1>Deleting the book with title of {{book.title}}</h1>
     <p>Confirm to Proceed?</p>
     <form method="POST">
-        {$csrf_token %}
+        {%csrf_token %}
         <input type="Submit" value="Yes"/>
         <a href="{% url 'books'%}">Cancel</a>
     </form>
 
-%endblock%}
+{%endblock%}

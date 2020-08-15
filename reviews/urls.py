@@ -5,5 +5,5 @@ import reviews.views
 
 
 urlpatterns =[
-    path('',reviews.views.reviews)
+    path('',reviews.views.reviews,name="review")
 ]

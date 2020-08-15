@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django.core.validators import MinLengthValidator
 # Create your models here.
 
@@ -13,6 +14,7 @@ class Book(models.Model):
     quotes = models.TextField(blank=False)
     desc = models.TextField(blank=False)
     cost = models.DecimalField(max_digits=10, decimal_places=3, blank=False)
+    owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.title
@@ -24,5 +26,5 @@ class Author(models.Model):
     biography=models.TextField(blank=False)
 
     def __str__(self):
-        return self.first_name + " " + self.last_name
+        return self.last_name + " " + self.first_name
 

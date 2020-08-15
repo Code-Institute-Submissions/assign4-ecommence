@@ -210,3 +210,10 @@ body{
     height: 100vh;
     color:#003636;
 }
+form{
+    padding-top:1rem;
+}
+/* Create author*/
+#create_author{
+    padding:10px;
+}

@@ -3,14 +3,12 @@
 {%load static %} 
 {%block title%}Update Author{%endblock%} 
 {%block content%}
-    <h1>Update Author{{author.first_name}}{{author.last_name}}</h1>
-    <form method="POST">
-        {%csrf_token %}
-        {{ form|crispy }}
-        <input type="submit" name="Update Author"/>
-    </form>
-
-
-
-
+    <div class="container" id="update_book">
+        <h1>Update Author of{{author.last_name}}  {{author.first_name}}</h1>
+        <form method="POST">
+            {%csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" name="Update Author"/>
+        </form>
+    </div>
 {%endblock%}

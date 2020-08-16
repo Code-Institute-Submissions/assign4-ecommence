@@ -15,7 +15,7 @@ body{
 #right-cart{
    color:white;
    text-decoration: underline;
-   font-size:1.2rem;
+   font-size:1.1rem;
    background: linear-gradient(180deg,rgba(255,255,255,0) 0%, rgb(53, 116, 53,0.99) 100%);
 }
 .wrapper{
@@ -216,4 +216,41 @@ form{
 /* Create author*/
 #create_author{
     padding:10px;
+}
+
+/*all book page*/
+.card {
+  width:100%;
+  margin-top: 10px;
+}
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+    .card-body {
+    flex: 0 0 auto;
+  }
+}
+
+.card-body {
+  padding: 5px 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background: #FFBBBB;
+}
+.card-body img{
+    height: 70vh;
+}
+.scrolling-wrapper, .scrolling-wrapper-flexbox {
+ 
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+#allbooks .container{
+    margin-top: 10px;
 }

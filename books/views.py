@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Book, Author
 from .forms import BookForm, AuthorForm
+from cloudinary.models import CloudinaryField
 
 # Create your views here.
 # Home Page
@@ -66,6 +67,7 @@ def update_book(request, book_id):
     else:
         # extract the data from database
         form = BookForm(instance=book)
+        print(form.cover)
         return render(request, 'books/update_book.template.html', {
             'form': form
         })
@@ -114,7 +116,6 @@ def all_authors(request):
     all_authors = Author.objects.all()
     return render(request, 'books/all_authors.template.html', {
         'authors': all_authors,
-        'books':all_books
     })
 
 # update authors page
@@ -130,6 +131,7 @@ def update_author(request, author_id):
     else:
         # extract data from database
         form = AuthorForm(instance=author)
+        
         return render(request, 'books/update_author.template.html', {
                       'form': form,
                       'author': author

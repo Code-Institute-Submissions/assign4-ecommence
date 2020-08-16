@@ -1,4 +1,5 @@
 {% extends 'base.template.html'%} 
+{% load cloudinary %}
 {%load static %} 
 {%block title%}Delete Author{%endblock%} 
 {%block content%}
@@ -9,5 +10,4 @@
         <input type="Submit" value="Yes"/>
         <a href="{% url 'all_authors'%}">Cancel</a>
     </form>
-
-{%endblock%}
+{%endblock%}   

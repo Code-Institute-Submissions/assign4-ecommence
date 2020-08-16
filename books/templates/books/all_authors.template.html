@@ -7,14 +7,12 @@
     <div class="container" >
             <h1>List of Authors</h1>
             <br/>
-                <div class="card">
+                <div class="card-author">
                     <div class="scrolling-wrapper-flexbox">
                         {%for author in authors%}
-                        <div class="card-body">
+                        <div class="card-body-author">
                             {% cloudinary author.cover %}
-                            {{author.last_name}} {{author.first_name}}
-                            <a href="{% url 'update_author' author_id=author.id %}">Update</a>
-                            <a href="{% url 'delete_author' author_id=author.id %}">Delete</a>
+                            <h2><a href="{% url 'view_author' author_id=author.id %}">{{author.last_name}} {{author.first_name}}</a></h2>
                         </div>
                         {%endfor%} 
                     </div>

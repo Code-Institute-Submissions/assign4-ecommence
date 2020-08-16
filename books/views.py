@@ -41,6 +41,7 @@ def create_book(request):
 # view book page
 def view_book(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
+    
     return render(request, 'books/view_books.template.html', {
         "book": book
     })
@@ -60,14 +61,12 @@ def update_book(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
     # Submitted form
     if request.method == "POST":
-        form = BookForm(request.POST, instance=book)
-        
+        form = BookForm(request.POST, instance=book)  
         form.save()
         return redirect(reverse(all_books))
     else:
         # extract the data from database
         form = BookForm(instance=book)
-        print(form.cover)
         return render(request, 'books/update_book.template.html', {
             'form': form
         })
@@ -117,7 +116,12 @@ def all_authors(request):
     return render(request, 'books/all_authors.template.html', {
         'authors': all_authors,
     })
-
+# view author page
+def view_author(request, author_id):
+    author = get_object_or_404(Author, pk=author_id)
+    return render(request, 'books/view_author.template.html', {
+        "author": author
+    })
 # update authors page
 
 @ login_required

@@ -1,13 +1,16 @@
 {% extends 'base.template.html'%} 
 {%load static %} 
-{%block title%}Delete Book{%endblock%} 
+{%block title%}Book - Delete{%endblock%} 
 {%block content%}
-    <h1>Deleting the book with title of {{book.title}}</h1>
-    <p>Confirm to Proceed?</p>
-    <form method="POST">
-        {%csrf_token %}
-        <input type="Submit" value="Yes"/>
-        <a href="{% url 'books'%}">Cancel</a>
-    </form>
-
+<div id="delete-book">
+    <div class="alert alert-danger">
+        <h1>Deleting book title : {{book.title}}</h1>
+        <p>Confirm to Proceed?</p>
+        <form method="POST">
+            {%csrf_token %}
+            <input type="Submit" value="Yes" class="btn btn-danger"/>
+            <a href="{% url 'books'%}" class="btn btn-primary">Cancel</a>
+        </form>
+    </div>
+</div>
 {%endblock%}

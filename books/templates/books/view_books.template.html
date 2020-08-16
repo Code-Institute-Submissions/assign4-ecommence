@@ -1,12 +1,37 @@
 {% extends 'base.template.html'%} 
+{% load cloudinary %}
 {%load static %} 
-{%block title%}All Books{%endblock%} 
+{%block title%}Book - {{book.title}}{%endblock%} 
 {%block content%}
-<ul>
-    <li>Title : {{book.title}}</li>
-    <li>Published :{{book.published}}</li>
+<div id="view_book">
+    <div class="container" >
+        <div class="row">
+            <div class="col-sm-6" id="book-image">
+                <h2>{{book.title}}</h2>
+                {%for a in book.authors.all %}
+                <h3>{{a.last_name}} {{a.first_name}} </h3>
+                {%endfor%}
+                <h6>Cost : ${{book.cost}}</h6>
+                {% cloudinary book.cover %}
+            </div>
+            <div class="col-sm-6" id="book-details">
+                <a class="btn btn-info btn-sm" href="{% url 'books' %}">Back</a>
+                {% if user.is_authenticated and user.is_superuser %}
+                <a class="btn btn-primary btn-sm" href="{% url 'update_book' book_id=book.id %}">Update</a>
+                <a class="btn btn-danger btn-sm" href="{% url 'delete_book' book_id=book.id %}">Delete</a>
+                {% endif %}
+                <p><strong>Published</strong> : {{book.published}}</p>
+                <p><strong>ISBN</strong> : {{book.ISBN}}</p>
+                <p><strong>length</strong> : {{book.length}} pages</p>
+                <p><strong>Quotes</strong> : </p>
+                <p><em>{{book.quotes}}</em></p>
+                <p><strong>Descriptions</strong> : </p>
+                <p>{{book.desc}}</p>
+            
+            
+            </div>
+        </div>
+    </div>
+</div>
 
-
-
-</ul>
 {%endblock%}

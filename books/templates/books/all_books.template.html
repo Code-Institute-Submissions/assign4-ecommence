@@ -12,11 +12,11 @@
                         {%for book in books%}
                        <div class="card-body">
                             {% cloudinary book.cover %}
-                            <p class="card-text">{{book.title}}</p>
-                            <a href="{% url 'view_book' book_id=book.id %}">Details</a>
-                            <a class="btn btn-primary btn-sm" href="{% url 'update_book' book_id=book.id %}">Update</a>
-                            <a class="btn btn-primary btn-sm" href="{% url 'delete_book' book_id=book.id %}">Delete</a>
-                            <a class="btn btn-primary btn-sm" href="#">Add to Cart</a>
+                            <div class="card-text">
+                                <p><a href="{% url 'view_book' book_id=book.id %}">{{book.title}}</a> by {%for a in book.authors.all %}
+                                {{a.last_name}} {{a.first_name}} {%endfor%}</p>
+                                <p>${{book.cost}}    <a class="btn btn-primary btn-sm" href="#">Add to Cart</a></p>  
+                            </div> 
                         </div>
                         {%endfor%} 
                     </div>

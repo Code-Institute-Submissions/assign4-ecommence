@@ -15,7 +15,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="{% static 'style/styles.css' %}" />
-    <title>Books - {%block title%}{%endblock%}</title>
+    <title>{%block title%}{%endblock%}</title>
   </head>
   <body>
     <div class="nav-area" >
@@ -30,7 +30,7 @@
         <div>
           <div>
             <ul>
-                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'books' %}">Books</a></li>
                 <li><a href="{% url 'all_authors' %}">Authors</a></li>
                 <li><a href="{% url 'carts' %}">Cart</a></li>

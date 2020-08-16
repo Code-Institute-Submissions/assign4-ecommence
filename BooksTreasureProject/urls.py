@@ -19,7 +19,7 @@ import books.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', books.views.index, name="index"),
+    path('', books.views.index, name="home"),
     path('accounts/', include('allauth.urls')),
     path('books/', include('books.urls')),
     path('reviews/', include('reviews.urls')),

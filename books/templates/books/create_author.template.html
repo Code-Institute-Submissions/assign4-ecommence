@@ -1,15 +1,16 @@
 {% extends 'base.template.html'%} 
 {% load cloudinary %}
 {%load static %} 
-{%block title%}Create Author{%endblock%} 
+{%block title%}Author - Create{%endblock%} 
 {% load crispy_forms_tags %}
 {%block content%}
     <div class="container" id="create_author">
         <h1>Create A New Author</h1>
+        <a class="btn btn-info btn-sm" href="{% url 'home' %}">Back</a>
         <form method="POST" enctype="multipart/form-data" id="author-form">
             {%csrf_token%}
             {{ form|crispy }}
-            <input type="Submit"/>
+            <input type="Submit" class="btn btn-primary btn-sm"/>
         </form>
     </div>
  

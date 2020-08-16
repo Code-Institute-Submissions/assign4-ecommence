@@ -2,14 +2,15 @@
 {% load cloudinary %}
 {% load crispy_forms_tags %}
 {%load static %} 
-{%block title%}Update Book{%endblock%} 
+{%block title%}Book - Update {%endblock%} 
 {%block content%}
-    <div class="container" id="update_author">
-        <h1>Update Book for title :{{book.title}}</h1>
+    <div class="container" id="update_book">
+        <h1>Update Book </h1>
+        <a class="btn btn-info btn-sm" href="{% url 'books' %}">Back</a>
         <form method="POST" enctype="multipart/form-data" id="book-form">
             {%csrf_token %}
             {{ form|crispy }}
-            <input type="submit" name="Update Book"/>
+            <input type="submit" name="Update Book" class="btn btn-primary btn-sm"/>
         </form>
     </div>
 {%block js %}

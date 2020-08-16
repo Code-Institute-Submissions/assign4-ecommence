@@ -177,13 +177,11 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 
 # which url to go to when the user has successfully logged in
-LOGIN_REDIRECT_URL = '/home'
-ACCOUNT_LOGOUT_REDIRECT_URL = '/home'
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/'
 # for flash messages
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
-
- 
 CLOUDINARY = {
     'cloud_name': os.environ.get("CLOUDINARY_CLOUD_NAME"),
     'api_key': os.environ.get("CLOUDINARY_API_KEY"),

@@ -31,4 +31,3 @@ class Author(models.Model):
     
     def __str__(self):
         return self.last_name + " " + self.first_name
-

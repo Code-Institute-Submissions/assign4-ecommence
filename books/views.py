@@ -41,9 +41,8 @@ def create_book(request):
 # view book page
 def view_book(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
-    
     return render(request, 'books/view_books.template.html', {
-        "book": book
+        "book": book,
     })
 # all books page
 

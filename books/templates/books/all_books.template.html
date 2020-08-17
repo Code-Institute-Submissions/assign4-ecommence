@@ -6,6 +6,7 @@
 <div id="allbooks">
     <div class="container">
             <h1>List of Available Books</h1>
+            <smalll>Scroll to right for view more</smalll>
             <br/>
                 <div class="card">
                     <div class="scrolling-wrapper-flexbox">
@@ -13,7 +14,8 @@
                        <div class="card-body">
                             {% cloudinary book.cover %}
                             <div class="card-text">
-                                <p><a href="{% url 'view_book' book_id=book.id %}">{{book.title}}</a> by {%for a in book.authors.all %}
+                                <p><a href="{% url 'view_book' book_id=book.id %}">{{book.title}}</a> </p> 
+                                <p>By {%for a in book.authors.all %}
                                 {{a.last_name}} {{a.first_name}} {%endfor%}</p>
                                 <p>${{book.cost}}    <a class="btn btn-primary btn-sm" href="#">Add to Cart</a></p>  
                             </div> 

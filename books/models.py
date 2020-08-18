@@ -26,6 +26,7 @@ class Book(models.Model):
 class Author(models.Model):
     first_name = models.CharField(blank=False, max_length=80)
     last_name = models.CharField(blank=False, max_length=80)
+    books = models.ManyToManyField('book')
     biography=models.TextField(blank=False)
     cover = CloudinaryField()
     

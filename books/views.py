@@ -4,7 +4,6 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Book, Author
 from .forms import BookForm, AuthorForm
-from cloudinary.models import CloudinaryField
 
 # Create your views here.
 # Home Page
@@ -90,13 +89,15 @@ def create_author(request):
     if request.method == "POST":
         # Submission data from User
         form = AuthorForm(request.POST)
+        #valid form
         if form.is_valid():
-            form.save()
+            author=form.save(commit=False)
+            author.owner=request.user
+            author.save()
             messages.success(request,"New Author has been Added to the list!")
             # show in all books view page
             return redirect(reverse(all_authors))
         else:
-            form = AuthorForm()
             return render(request, 'books/create_author.template.html', {
                 'form': form
             })

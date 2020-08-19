@@ -380,3 +380,10 @@ form{
     font-size: 2rem;
     text-align: center;
 }
+
+
+/*view cart page*/
+#cart img{
+    height: 20vh;
+    width: 30%;
+}

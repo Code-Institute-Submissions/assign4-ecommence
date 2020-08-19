@@ -1,0 +1,33 @@
+{%extends 'base.template.html'%} 
+{% load cloudinary %}
+{%load static %} 
+{%block title%}Carts{%endblock%} 
+{%block content%}
+<div id="cart">
+    <div class="container">
+        
+            <h1>Shopping Cart List</h1>
+            <ul>
+                {% for key, value in cart.items %}
+                <li>
+                    <img src="{{value.image}}" class="card-img" alt="...">
+                    {{value.title}} (${{value.cost}}) x {{value.qty}}<br/>
+                    Total Cost: ${{value.total_cost}}  <br/>   
+                    
+                    <form method="POST" action="{% url 'update_cart_quantity' book_id=value.id %}">
+                        {% csrf_token %}
+                        <input type="text" name="qty" value="{{value.qty}}" style="width:40px"/>
+                        <a href="{% url 'remove_cart' book_id=value.id %}" class="btn btn-primary btn-sm">Remove</a>
+                        <input type="submit" value="Update quantity" class="btn btn-primary btn-sm"/>
+                    </form>
+                </li>
+                {%endfor%}
+            </ul>
+            <h3>Carts Total: ${{total}}
+                <a href="#" class="btn btn-primary">Checkout</a>
+            </h3>
+
+       
+    </div>
+</div>
+ {%endblock%}

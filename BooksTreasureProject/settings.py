@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'cloudinary',
     'crispy_forms',
     'books',
-    'reviews',
     'carts',
 ]
 

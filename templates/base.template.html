@@ -21,7 +21,7 @@
     <div class="nav-area" >
       <h1 id="right-nav">Classic Books Store</h1>
       <img src="/static/images/icon.jpg" style="width: 50px;">
-      <a href="#" id="right-cart">Shopping Cart ({{number_of_items}})</a>
+      <a href="{% url 'view_cart' %}" id="right-cart">Shopping Cart ({{number_of_items}})</a>
       <input type="checkbox" class="books-menu" />
       <div class="nav-icon">
         <div></div>
@@ -33,7 +33,7 @@
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'books' %}">Books</a></li>
                 <li><a href="{% url 'all_authors' %}">Authors</a></li>
-                <li><a href="{% url 'carts' %}">Cart</a></li>
+                <li><a href="{% url 'view_cart' %}">Cart</a></li>
                 {% if user.is_authenticated and user.is_superuser %}
                 <li><a href="{% url 'create_book' %}">Add a book</a></li>
                 <li><a href="{% url 'create_author' %}">Add a Author</a></li>

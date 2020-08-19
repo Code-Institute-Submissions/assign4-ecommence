@@ -22,6 +22,6 @@ urlpatterns = [
     path('', books.views.index, name="home"),
     path('accounts/', include('allauth.urls')),
     path('books/', include('books.urls')),
-    path('carts/', include('carts.urls'))
-
+    path('carts/', include('carts.urls')),
+    path('checkout/', include('checkout.urls'))
 ]

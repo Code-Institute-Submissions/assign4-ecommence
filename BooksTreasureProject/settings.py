@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'books',
     'carts',
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -77,6 +78,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'carts.contexts.cart_contents'
             ],
         },
     },
@@ -181,8 +183,6 @@ ACCOUNT_LOGOUT_REDIRECT_URL = '/'
 # for flash messages
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
-CLOUDINARY = {
-    'cloud_name': os.environ.get("CLOUDINARY_CLOUD_NAME"),
-    'api_key': os.environ.get("CLOUDINARY_API_KEY"),
-    'api_secret': os.environ.get("CLOUDINARY_API_SECRET"),
-}
+#stripe
+STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')

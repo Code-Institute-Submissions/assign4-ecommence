@@ -19,9 +19,9 @@
   </head>
   <body>
     <div class="nav-area" >
-      <h1 id="right-nav">Classic Books Store</h1>
-      <img src="/static/images/icon.jpg" style="width: 50px;">
-      <a href="{% url 'view_cart' %}" id="right-cart">Shopping Cart ({{number_of_items}})</a>
+      <h1 id="right-nav">
+      <img src="/static/images/icon.jpg" style="width: 50px;">Classic Books Store</h1>
+      <a href="{% url 'view_cart' %}" id="right-cart"><img src="/static/images/shopping_cart.jpg" style="width: 38px;border-radius:50%">({{number_of_items}})</a>
       <input type="checkbox" class="books-menu" />
       <div class="nav-icon">
         <div></div>

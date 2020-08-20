@@ -48,8 +48,10 @@ def view_book(request, book_id):
 
 def all_books(request):
     all_books = Book.objects.all()
+    number_of_books=all_books.count()
     return render(request, 'books/all_books.template.html', {
-        'books': all_books
+        'books': all_books,
+        'number_of_books':number_of_books,
     })
 
 # update books page

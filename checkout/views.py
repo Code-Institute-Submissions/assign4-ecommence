@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, HttpResponse, reverse, redirect
 from django.contrib.sites.models import Site
+from django.contrib import messages
 
 # import in the settings
 from django.conf import settings
@@ -9,6 +10,10 @@ import stripe
 
 # import in the book
 from books.models import Book
+
+# import in the purchase
+#from .models import Purchase
+#from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -70,8 +75,7 @@ def checkout_success(request):
     request.session["shopping_cart"] = {}
     messages.success(request, "Your purchases been completed")
     return redirect(reverse('books'))
-    # return HttpResponse("checkout success")
 
 
 def checkout_cancelled(request):
-    return HttpResponse("checkout cancelled")
+    return redirect(reverse('view_cart'))

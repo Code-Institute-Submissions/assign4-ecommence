@@ -1,10 +1,15 @@
 {% extends 'base.template.html'%} 
+{% load crispy_forms_tags %}
 {%load static %} 
-{% load cloudinary %}
 {%block title%}All Books{%endblock%} 
 {%block content%}
 <div id="allbooks">
     <div class="container">
+            <form method="GET">
+                {{form|crispy}}
+                <input type="submit" value="Search">
+            </form>
+            
             <h1>List of Available Books</h1>
             <h5>Total Books available : <strong>{{number_of_books}}</strong></h5>
             <small>Scroll to right for view more.</Small>

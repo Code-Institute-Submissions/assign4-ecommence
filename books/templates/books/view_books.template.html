@@ -19,6 +19,7 @@
                 <a class="btn btn-primary btn-sm" href="{% url 'update_book' book_id=book.id %}">Update</a>
                 <a class="btn btn-danger btn-sm" href="{% url 'delete_book' book_id=book.id %}">Delete</a>
                 {% endif %}
+                <span id="starRating"></span> <small>{{ average_ratings }} </small> 
                 <p><strong>Published</strong> : {{book.published}}</p>
                 <p><strong>ISBN</strong> : {{book.ISBN}}</p>
                 <p><strong>length</strong> : {{book.length}} pages</p>

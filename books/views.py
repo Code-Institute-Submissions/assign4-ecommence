@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect, reverse
 from django.shortcuts import get_object_or_404
+from django.db.models import Q
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Book, Author
-from .forms import BookForm, AuthorForm
+from .forms import BookForm, AuthorForm, SearchForm
 
 # Create your views here.
 # Home Page
@@ -12,31 +13,34 @@ from .forms import BookForm, AuthorForm
 def index(request):
     return render(request, 'books/index.template.html')
 
-
 # create books page
+
+
 @ login_required
 def create_book(request):
     if request.method == "POST":
         # Submission data from User
         form = BookForm(request.POST)
-        #valid form
+        # valid form
         if form.is_valid():
-            book=form.save(commit=False)
-            book.owner=request.user
+            book = form.save(commit=False)
+            book.owner = request.user
             book.save()
-            messages.success(request,"New Book has been added to the list!")
+            messages.success(request, "New Book has been added to the list!")
             # show in all books view page
             return redirect(reverse(all_books))
         else:
             return render(request, 'books/create_book.template.html', {
-            'form': form
-        })
+                'form': form
+            })
     else:
         # create a new book form
         form = BookForm()
         return render(request, 'books/create_book.template.html', {
             'form': form
         })
+
+
 # view book page
 def view_book(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
@@ -47,21 +51,48 @@ def view_book(request, book_id):
 
 
 def all_books(request):
-    all_books = Book.objects.all()
-    number_of_books=all_books.count()
-    return render(request, 'books/all_books.template.html', {
-        'books': all_books,
-        'number_of_books':number_of_books,
-    })
+    form=SearchForm(request.GET)
+    if request.GET:
+        #create a query
+        query = ~Q(pk__in=[]) #True Where 1
+        
+        #Get the title
+        if 'title' in request.GET and request.GET['title']:
+            print(request.GET)
+            title_id= request.GET['title']
+            print(title_id)
+            query = query & Q(title__icontains=title_id)
+
+        # select all the books
+        all_books = Book.objects.all()
+
+        #filter and reassign
+        all_books =all_books.filter(query)
+        number_of_books = all_books.count()
+        return render(request, 'books/all_books.template.html', {
+            'form':form,
+            'books': all_books,
+            'number_of_books': number_of_books,
+        })
+    else:
+        # Search request not submitted
+        all_books = Book.objects.all()
+        number_of_books = all_books.count()
+        return render(request, 'books/all_books.template.html', {
+            'form':form,
+            'books': all_books,
+            'number_of_books': number_of_books,
+        })
 
 # update books page
+
 
 @ login_required
 def update_book(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
     # Submitted form
     if request.method == "POST":
-        form = BookForm(request.POST, instance=book)  
+        form = BookForm(request.POST, instance=book)
         form.save()
         return redirect(reverse(all_books))
     else:
@@ -86,17 +117,18 @@ def delete_book(request, book_id):
             'book': book})
 # create authors page
 
+
 @ login_required
 def create_author(request):
     if request.method == "POST":
         # Submission data from User
         form = AuthorForm(request.POST)
-        #valid form
+        # valid form
         if form.is_valid():
-            author=form.save(commit=False)
-            author.owner=request.user
+            author = form.save(commit=False)
+            author.owner = request.user
             author.save()
-            messages.success(request,"New Author has been Added to the list!")
+            messages.success(request, "New Author has been Added to the list!")
             # show in all books view page
             return redirect(reverse(all_authors))
         else:
@@ -119,12 +151,15 @@ def all_authors(request):
         'authors': all_authors,
     })
 # view author page
+
+
 def view_author(request, author_id):
     author = get_object_or_404(Author, pk=author_id)
     return render(request, 'books/view_author.template.html', {
         "author": author
     })
 # update authors page
+
 
 @ login_required
 def update_author(request, author_id):
@@ -137,12 +172,13 @@ def update_author(request, author_id):
     else:
         # extract data from database
         form = AuthorForm(instance=author)
-        
+
         return render(request, 'books/update_author.template.html', {
                       'form': form,
                       'author': author
                       })
 # delete author page
+
 
 @ login_required
 def delete_author(request, author_id):

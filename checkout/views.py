@@ -19,6 +19,7 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 
+
 def checkout(request):
     # tell Stripe what my api_key is
     stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -46,7 +47,7 @@ def checkout(request):
             "amount": int(book_model.cost * 100),
             "quantity": book['qty'],
             "currency": "SGD",
-         }
+        }
 
         line_items.append(item)
         all_book_ids.append(str(book_model.id))
@@ -72,7 +73,7 @@ def checkout(request):
         "public_key": settings.STRIPE_PUBLISHABLE_KEY
     })
 
-    
+
 def checkout_success(request):
     request.session["shopping_cart"] = {}
     messages.success(request, "Your purchases been completed")
@@ -112,12 +113,11 @@ def payment_completed(request):
         # retrieve the session data
         session = event['data']['object']
 
-        # do whatever I want with the session
+        # return with the session
         handle_payment(session)
 
     # status 200 means everything's ok
     return HttpResponse(status=200)
-
 
 
 def handle_payment(session):

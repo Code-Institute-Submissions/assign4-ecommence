@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404, HttpResponse, reverse, redirect
+from django.shortcuts import render, get_object_or_404, HttpResponse
+from django.shortcuts import reverse, redirect
 from django.contrib.sites.models import Site
+from django.views.decorators.csrf import csrf_exempt
 from django.contrib import messages
 
 # import in the settings
@@ -12,8 +14,8 @@ import stripe
 from books.models import Book
 
 # import in the purchase
-#from .models import Purchase
-#from django.contrib.auth.models import User
+from .models import Purchase
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -79,3 +81,54 @@ def checkout_success(request):
 
 def checkout_cancelled(request):
     return redirect(reverse('view_cart'))
+
+
+@csrf_exempt
+def payment_completed(request):
+    # retrieve the information from the payment (also known as the payload)
+    # this will contains the information sent out, like the line items
+    payload = request.body
+
+    # verify that the payment is legit
+    sig_header = request.META["HTTP_STRIPE_SIGNATURE"]
+
+    endpoint_secret = "whsec_LtD1CfuEXMibDG5jgPBUWPSXrILIZUf5"
+    event = None
+
+    try:
+        event = stripe.Webhook.construct_event(
+            payload, sig_header, endpoint_secret)
+    except ValueError:
+        # invalid payload
+        # status 400 means forbidden (this means someone tried to s
+        # poof a stripe payemnt)
+        return HttpResponse(status=400)
+    except stripe.error.SignatureVerificationError:
+        # invalid signature
+        return HttpResponse(status=400)
+
+    # handle the payment proper
+    if event["type"] == "checkout.session.completed":
+        # retrieve the session data
+        session = event['data']['object']
+
+        # do whatever I want with the session
+        handle_payment(session)
+
+    # status 200 means everything's ok
+    return HttpResponse(status=200)
+
+
+
+def handle_payment(session):
+    user = get_object_or_404(User, pk=session["client_reference_id"])
+    all_book_ids = session['metadata']['all_books_id'].split(",")
+
+    for book_id in all_book_ids:
+        book_model = get_object_or_404(Book, pk=book_id)
+
+        # create the purchase model
+        purchase = Purchase()
+        purchase.book_id = book_model
+        purchase.user_id = user
+        purchase.save()

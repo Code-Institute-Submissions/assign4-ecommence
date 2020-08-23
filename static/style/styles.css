@@ -12,13 +12,30 @@ body, html {
   margin-left: auto; 
   
 }
-
+/*navbar message*/
+.alert-success {
+    font-size: smaller;
+}
 /*footer*/
 .page-footer{
-    text-align: center;
+    text-align: left;
     margin:0;
+    font-size: 1rem;
+    
 }
-
+.footer-copyright{
+    text-align: center;
+    font-size: 1rem;
+}
+/*footer -connect link*/
+.media{
+    flex-direction: column;
+    color: rgb(99, 138, 21);
+}
+.fab{
+    color: rgb(99, 138, 21);
+    font-size:38px;
+}
 /*home page*/
 #home{
     position: relative;
@@ -36,8 +53,9 @@ body, html {
     align-items: center;
     justify-content: center;
     text-align:center;
-    height:100%;
+    padding: 200px 50px 0px 50px;
 }
+
 /*home h1*/
 .banner-text h1{
     font-size: 2.7rem;
@@ -65,7 +83,34 @@ body, html {
     background-color: #FFDAB9;
     color:brown;
 }
-
+/*home banner-book*/
+#home .banner-books{
+    padding-top: 100px;
+    align-items: center;
+    text-align:left;   
+}
+/*popular books cards css*/
+.banner-books-image{
+    overflow: scroll;
+    width:100%;
+    height: 72vh;
+    padding-right:20px;
+}
+.banner-books-image-content{
+    display: flex;
+    flex: 0.8 0.6 auto;
+    background-color: #FFDAB9;
+    height: 72vh;
+}
+.banner-books-image-content img{
+    width:50%;
+}
+.banner-books-image-content p{
+    width:50%;
+    color:#6B8E23;
+    padding: 50px 10px 0px 10px;
+    font-size:1.3rem;
+}
 /*all books page*/
 #allbooks{
    background-color: #b8cece;
@@ -73,7 +118,14 @@ body, html {
     color:#6991c7;
    
 }
-
+/*search book css*/
+#book-search{
+    padding: 150px 50px 0px 50px;
+}
+/*list book css*/
+#book-list{
+    padding: 60px 10px 0px 10px;
+}
 .card {
   width:80%;
 }

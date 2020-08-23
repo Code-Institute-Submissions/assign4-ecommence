@@ -3,34 +3,36 @@
 {%load static %} 
 {%block title%}All Books{%endblock%} 
 {%block content%}
-<div id="allbooks">
-        <div class="row">
-            <div class="col-sm-3">
-                <form method="GET">
-                    {{form|crispy}}
-                    <input type="submit" value="Search">
-                </form>
-            </div>   
-            <div class="col-sm-9">
-                <h1>List of Available Books : {{number_of_books}}</h1>
-                <p>Scroll to right for view more.</p>
-                    <div class="card">
-                        <div class="scrolling-wrapper-flexbox">
-                            {%for book in books%}
-                            <div class="card-body">
-                                <img src="{{book.image}}" class="card-img" alt="...">
-                                <div class="card-text">
-                                    <p><a href="{% url 'view_book' book_id=book.id %}">{{book.title}}</a> </p> 
-                                    <p>By {{book.authors}}</p>
-                                    <p>${{book.cost}} <a class="btn btn-primary btn-sm" href="{% url 'add_cart' book_id=book.id%}">Add to Cart</a></p>  
-                                </div> 
+<div class="container-fluids" id="allbooks">
+    <div class="row">
+        <!--Search content-->
+        <div class="col-sm-6" id="book-search">
+            <h3>Filter by</h3>
+            <form method="GET">
+                {{form|crispy}}
+                <input type="submit" value="Search" class="btn btn-info">
+            </form>
+        </div>   
+        <!--List of books and search result-->
+        <div class="col-sm-6" id="book-list">
+            <h1>List of Available Books : {{number_of_books}}</h1>
+            <p>Scroll to right for view more.</p>
+                <div class="card">
+                    <div class="scrolling-wrapper-flexbox">
+                        {%for book in books%}
+                        <div class="card-body">
+                            <img src="{{book.image}}" class="card-img" alt="...">
+                            <div class="card-text">
+                                <p><a href="{% url 'view_book' book_id=book.id %}">{{book.title}}</a> </p> 
+                                <p>By {{book.authors}}</p>
+                                <p>${{book.cost}} <a class="btn btn-primary btn-sm" href="{% url 'add_cart' book_id=book.id%}">Add to Cart</a></p>  
                             </div> 
-                            {%endfor%} 
-                        </div>
-                    </div>  
-            </div>
+                        </div> 
+                        {%endfor%} 
+                    </div>
+                </div>  
         </div>
-    
+    </div>
 </div>
 
 {%endblock%}

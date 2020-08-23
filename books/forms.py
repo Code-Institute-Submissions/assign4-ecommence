@@ -20,4 +20,7 @@ class SearchForm(forms.Form):
     # seach by book title
     title = forms.ModelChoiceField(queryset=Book.objects.all(), to_field_name="title",
                                     required=False)
+    # search by author title
+    authors = forms.ModelChoiceField(queryset=Author.objects.all(),
+                                    required=False)
     

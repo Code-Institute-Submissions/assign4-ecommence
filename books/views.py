@@ -51,26 +51,29 @@ def view_book(request, book_id):
 
 
 def all_books(request):
-    form=SearchForm(request.GET)
+    form = SearchForm(request.GET)
     if request.GET:
-        #create a query
-        query = ~Q(pk__in=[]) #True Where 1
-        
-        #Get the title
+        # create a query
+        query = ~Q(pk__in=[])  # True Where 1
+
+        # Get the title
         if 'title' in request.GET and request.GET['title']:
-            print(request.GET)
-            title_id= request.GET['title']
-            print(title_id)
+            title_id = request.GET['title']
             query = query & Q(title__icontains=title_id)
+
+        # Get the Author
+        if 'authors' in request.GET and request.GET['authors']:
+            author_id = request.GET['authors']
+            query = query & Q(authors=author_id)
 
         # select all the books
         all_books = Book.objects.all()
 
         #filter and reassign
-        all_books =all_books.filter(query)
+        all_books = all_books.filter(query)
         number_of_books = all_books.count()
         return render(request, 'books/all_books.template.html', {
-            'form':form,
+            'form': form,
             'books': all_books,
             'number_of_books': number_of_books,
         })
@@ -79,7 +82,7 @@ def all_books(request):
         all_books = Book.objects.all()
         number_of_books = all_books.count()
         return render(request, 'books/all_books.template.html', {
-            'form':form,
+            'form': form,
             'books': all_books,
             'number_of_books': number_of_books,
         })

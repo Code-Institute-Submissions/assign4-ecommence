@@ -2,18 +2,49 @@
 {%load static %} 
 {%block title%}Books - Home{%endblock%} 
 {%block content%}
-<div id="home">
-    <div class="col-sm-12">
-        <div class="wrapper banner-text">
-            <h1>Welcome to TreasureClassic Books Bookstore</h1>
-            <p>Shop for Classic Books Collection Lover.</p>
-            <p>Click on <span class="underline">Explore</span> to begin.</p>
-            <a href="{% url 'books' %}" class="btn-area">Explore</a>
-        </div> 
-    </div>
-    <div class="col-sm-2"></div>
-    <div class="col-sm-8">
-        <h5>Popular Titles</h5>
+<div class="container-fluids" id="home">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="banner-text">
+                <h1>Welcome to TreasureClassic Books Bookstore</h1>
+                <p>Shop for Classic Books Collection Lover.</p>
+                <p>Click on <span class="underline">Explore</span> to begin.</p>
+                <a href="{% url 'books' %}" class="btn-area">Explore</a>
+            </div> 
+        </div>
+        <div class="col-sm-6">
+            <div class="banner-books">
+                <h3>Popular Book Titles</h3>
+                    <div class="banner-books-image">
+                        <!--Image 1-->
+                        <div class="banner-books-image-content">
+                        <img src="https://res.cloudinary.com/doa7bkzvs/image/upload/v1597556843/pride_and_prejudice.jpg" alt="pride_and_prejudice">
+                        <p><strong>Pride and Prejudice</strong><br>
+                        It is a truth universally acknowledged that when most people think of Jane 
+                        Austen they think of this charming and humorous story of love, difficult families 
+                        and the tricky task of finding a handsome husband with a good fortune.</p>
+                        </div>
+                        <!--Image 2--> 
+                        <div class="banner-books-image-content">
+                        <img src="https://res.cloudinary.com/doa7bkzvs/image/upload/v1597561071/Nineteen_Eighty_Four.jpg" alt="Nineteen_Eighty_Four">
+                        <p><strong>Nineteen Eighty Four</strong><br>
+                        The definitive dystopian novel, Orwell’s vision of a high surveillance 
+                        society is gripping from the first page to the last.
+                        </p>
+                        </div>
+                        <div class="banner-books-image-content">
+                        <!--Image 3--> 
+                        <img src="https://res.cloudinary.com/doa7bkzvs/image/upload/v1597562640/little_women.jpg" alt="little_women">     
+                        <p><strong>Little Women</strong><br>
+                        In Little Women, Louisa May Alcott set out to write a book in which 
+                        girls would see them themselves accurately reflected. The March sisters, 
+                        with their four very different personalities and ambitions, accurately 
+                        embody both the challenges of growing up and the irreplaceable bond of sisterhood.</p>
+                        </div>
+                    </div>
+                
+            </div>   
+        </div>
     </div>
 </div>
 {%endblock%}

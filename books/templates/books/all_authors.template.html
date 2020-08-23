@@ -4,20 +4,19 @@
 {%block title%}All Authors{%endblock%} 
 {%block content%}
 <div class="container-fluid" id="allauthors">
-            <h1>List of Authors</h1>
-            <p>Scroll to right for view more</p>
-            <br/>
-                <div class="card-author">
-                    <div class="scrolling-wrapper-flexbox">
-                        {%for author in authors%}
-                        <div class="card-body-author">
-                            <img src="{{author.image}}" class="card-img" alt="...">
-                            <h2><a href="{% url 'view_author' author_id=author.id %}">{{author.last_name}} {{author.first_name}}</a></h2>
-                        </div>
-                        {%endfor%} 
-                    </div>
+    <div id="author-banner">
+        <h1>List of Authors</h1>
+        <p>Scroll to right for view more</p>
+        <div class="card-author">
+            <div class="scrolling-wrapper-flexbox">
+                {%for author in authors%}
+                <div class="card-body-author">
+                    <img src="{{author.image}}" class="card-img" alt="...">
+                    <h2><a href="{% url 'view_author' author_id=author.id %}">{{author.last_name}} {{author.first_name}}</a></h2>
                 </div>
-        
- 
+                {%endfor%} 
+            </div>
+        </div>
+    </div>
 </div>
 {%endblock%}

@@ -3,7 +3,8 @@
 {%block title%}Author - Create{%endblock%} 
 {% load crispy_forms_tags %}
 {%block content%}
-    <div class="container" id="create_author">
+<div class="jumbotron" id="create_author">
+    <div class="container" >
         <h1>Create A New Author</h1>
         <a class="btn btn-info btn-sm" href="{% url 'home' %}">Back</a>
         <form method="POST">
@@ -12,6 +13,6 @@
             <input type="Submit" class="btn btn-primary btn-sm"/>
         </form>
     </div>
- 
+</div> 
 
 {%endblock%}

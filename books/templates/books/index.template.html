@@ -2,16 +2,18 @@
 {%load static %} 
 {%block title%}Books - Home{%endblock%} 
 {%block content%}
-
 <div id="home">
-  <div class="wrapper banner-text">
-    <h1>Welcome to Classic Books Treasure</h1>
-    <p>Shop for Classic Books Collection Lover.</p>
-    <p>Click on <span class="underline">Explore</span> to begin.</p>
-    <a href="{% url 'books' %}" class="btn-area">Explore</a>
-    
-  </div>
-  
+    <div class="col-sm-12">
+        <div class="wrapper banner-text">
+            <h1>Welcome to TreasureClassic Books Bookstore</h1>
+            <p>Shop for Classic Books Collection Lover.</p>
+            <p>Click on <span class="underline">Explore</span> to begin.</p>
+            <a href="{% url 'books' %}" class="btn-area">Explore</a>
+        </div> 
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <h5>Popular Titles</h5>
+    </div>
 </div>
-
 {%endblock%}

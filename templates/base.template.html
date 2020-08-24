@@ -48,7 +48,7 @@
                     
             </div>
         </div>
-        <a href="{% url 'view_cart' %}" ><img src="/static/images/shopping_cart.jpg" alt="shopping_cart" style="width: 38px;border-radius:50%">({{number_of_items}})</a>
+        <a href="{% url 'view_cart' %}" >{{request.user}}<img src="/static/images/shopping_cart.jpg" alt="shopping_cart" style="width: 38px;border-radius:50%">({{number_of_items}})</a>
     </nav>
     </div>
     {%block content %}

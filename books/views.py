@@ -150,18 +150,20 @@ def create_author(request):
 
 def all_authors(request):
     all_authors = Author.objects.all()
+    number_of_authors = all_authors.count()
     return render(request, 'books/all_authors.template.html', {
         'authors': all_authors,
+        'number_of_authors': number_of_authors,
     })
 # view author page
 
 
 def view_author(request, author_id):
     author = get_object_or_404(Author, pk=author_id)
-    books=Book.objects.filter(authors=author)
+    books = Book.objects.filter(authors=author)
     return render(request, 'books/view_author.template.html', {
         "author": author,
-        "books":books
+        "books": books
     })
 # update authors page
 

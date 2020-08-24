@@ -158,8 +158,10 @@ def all_authors(request):
 
 def view_author(request, author_id):
     author = get_object_or_404(Author, pk=author_id)
+    books=Book.objects.filter(authors=author)
     return render(request, 'books/view_author.template.html', {
-        "author": author
+        "author": author,
+        "books":books
     })
 # update authors page
 

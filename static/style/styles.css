@@ -166,7 +166,20 @@ body, html {
 /* Create book*/
 #create_book{
     padding:10px;
-    background-image: linear-gradient(to bottom, #6a85b6 0%, #bac8e0 100%);
+    
+}
+/*Create book-image css*/
+#create_book_image{
+    padding-left:10px;
+    background-image:url("/static/images/create_books.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+/*Create book-form css*/
+#create_book_form{
+    padding: 60px 10px 0px 10px;
 }
 /*view books page*/
 #book-image img{

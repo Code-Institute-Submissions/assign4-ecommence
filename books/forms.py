@@ -12,7 +12,7 @@ class BookForm(forms.ModelForm):
 class AuthorForm(forms.ModelForm):
     class Meta:
         model = Author
-        fields = ('first_name', 'last_name', 'books', 'biography', 'image')
+        fields = ('first_name', 'last_name',  'biography', 'image')
 
 
 # Search Form

@@ -2,14 +2,20 @@
 {% load crispy_forms_tags %}
 {%block title%}Book - Create{%endblock%} 
 {%block content%}
-    <div class="container" id="create_book">
-        <h1>Create A New Book</h1>
-        <a class="btn btn-info btn-sm" href="{% url 'home' %}">Back</a>
-        <form method="POST">
-            {%csrf_token%}
-            {{ form|crispy }}
-            <input type="Submit" class="btn btn-primary btn-sm"/>
-        </form>
+<div class="container-fluids" id="create_book">
+    <div class="row">
+        <div class="col-sm-6" id="create_book_image">
+        </div>
+        <div class="col-sm-6" id="create_book_form">
+            <h1>Create A New Book</h1>
+            <a class="btn btn-info btn-sm" href="{% url 'home' %}">Back</a>
+            <form method="POST">
+                {%csrf_token%}
+                {{ form|crispy }}
+                <input type="Submit" class="btn btn-primary btn-sm"/>
+            </form>
+        </div>
+        
     </div>
-
+</div>
 {%endblock%}

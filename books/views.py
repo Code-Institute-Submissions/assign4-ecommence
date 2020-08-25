@@ -152,9 +152,10 @@ def all_authors(request):
     all_authors = Author.objects.all()
     number_of_authors = all_authors.count()
     return render(request, 'books/all_authors.template.html', {
-        'authors': all_authors,
-        'number_of_authors': number_of_authors,
+            'authors': all_authors,
+            'number_of_authors': number_of_authors,
     })
+   
 # view author page
 
 

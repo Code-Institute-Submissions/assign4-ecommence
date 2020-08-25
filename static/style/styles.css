@@ -19,7 +19,7 @@ body, html {
 /*footer*/
 .page-footer{
     text-align: left;
-    margin:0;
+    margin : 20px 0 20px 0;
     font-size: 1rem;
     
 }
@@ -218,9 +218,8 @@ body, html {
 /*all author page*/
 
 #allauthors{
-    background-color: #e0c3fc;
-    height: 100vh;
-    color:#6991c7;
+    color:#8B008B;
+    box-sizing: border-box;
 }  
 
 /*all author banner css*/
@@ -228,33 +227,40 @@ body, html {
     padding: 60px 20px 0px 20px;
 }
 /*list of all author css*/
-.card-body-author img{
-    width: 500px;
-    height: 65vh;
+#author-list{
+    margin:5px 5px;
+}
+/*clear floats after the column*/
+#author-list::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+/*float by four columns side by side*/
+.column-author{
+    float: left;
+    width:20%;
+    padding: 5px 5px;
+}
+/*style the card*/
+.card-author{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 8px;
+    height: 100px;
+    text-align: center;
+    background-image: url("/static/images/author_list.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.card-body-author {
-  padding: 5px 8px;
-  margin: 8px;
-  border-radius: 5px;
-  background: transparent;
-  text-align: center;
+.card-author h3{
+    float: right;
+    width: 50%;
+    font-size: 1.3rem;
+    padding: 12px 0 0 0;
+    text-align: center;
 }
-.scrolling-wrapper-flexbox {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-
-    .card-body-author {
-    flex: 0 0 auto;
-  }
-}
-
-.card-author {
-  width:100%;
-  margin-top: 15px;
-}
-
 /* Create author*/
 #create_author{
     padding:10px;

@@ -1,6 +1,7 @@
 body, html {
   margin: 0;
   height: 100%;
+  background-color: rgb(252, 186, 3,0.09)
 }
 
 /*nav-link color*/
@@ -119,6 +120,7 @@ body, html {
     background-position: top; 
     background-repeat: no-repeat;
     background-size: 95% 75%;
+    background-color: white;
     
 }
 /*search book css*/
@@ -178,6 +180,7 @@ body, html {
 #create_book{
     padding:10px;
     color:#3d6388;
+    background-color: white;
 }
 /*Create book-form css*/
 #create_book_form{
@@ -202,6 +205,7 @@ body, html {
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: 50% 50%;
+    background-color: white;
     
 }
 /*book image column*/
@@ -222,6 +226,7 @@ body, html {
 #update_book{
     padding:10px;
     color:#E07F1F;
+    background-color: white;
 }
 
 /*update book-form css*/
@@ -243,6 +248,7 @@ body, html {
     font-size: 2rem;
     text-align: center;
     height: 100vh;
+    background-color: white;
 }
 
 /*all author page*/
@@ -252,6 +258,7 @@ body, html {
     box-sizing: border-box;
     height: 100vh;
     overflow: scroll;
+    background-color: white;
 }  
 
 /*all author banner css*/
@@ -296,6 +303,7 @@ body, html {
 /* Create author*/
 #create_author{
     padding:10px;
+    background-color: white;
 }
 /*create author form*/
 #create_author_form{
@@ -314,6 +322,7 @@ body, html {
     padding:10px;  
     color:#1B5006;
     font-weight: bold;
+    background-color: white;
 }
 
 /*update book-form css*/
@@ -338,6 +347,7 @@ body, html {
     background-size: 90% 53%;
     color:#135AEC;
     height: 100vh;
+    background-color: white;
     
 }
 /*view author image*/
@@ -367,16 +377,88 @@ body, html {
     font-size: 2rem;
     text-align: center;
     height: 100vh;
+    background-color: white;
 }
 
 /*view cart page*/
+#cart{
+    padding:60px;
+    height: 100vh;
+    color:#1ECBE1;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+/*cart basket outline*/
+#cart-basket{
+    width: 80%;
+    height:80%;
+    overflow: scroll;
+}
+/*list of cart item*/
+.cart_item{
+    padding:10px;
+    height: 25vh;
+    display: flex;
+    
+}
+.cart_item:nth-child(n){
+    border:1px solid #1ECBE1;
+}
+/*cart img*/
 #cart img{
-    height: 20vh;
+    height: 100%;
     width: 30%;
 }
-
-#cart{
-    background-color:#5cb8a1;
-    height: 100vh;
-    color:#003636;
+.item-image{
+    margin:0;
+    width:25%;
+   
 }
+/*item details*/
+.item-title{
+    width:25%;
+    
+}
+.item-title p{
+    display:block;
+    padding-top:20px;
+    font-size: 1rem;
+    color:#1ECBE1;
+    font-weight:bold;
+}
+/*item quantity*/
+.item-quantity{
+    width:25%;
+    padding-top:20px;
+    
+}
+
+/*item total cost*/
+.total-cost{
+    width:25%; 
+}
+.total-cost p{
+    display:block;
+    padding-top:20px;
+    font-size: 1rem;
+    color:#1ECBE1;
+    font-weight:bold;
+}
+
+.cart-right{ 
+    padding:10px 0 0 0;
+    width: 35%;
+    font-weight:bold;
+    font-size: 1.5rem;
+    background-image:url("/static/images/cart.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 70% 90%;  
+}
+.cart-right ul{
+    list-style: none;
+    text-align: justify;
+
+}
+

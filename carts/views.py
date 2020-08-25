@@ -46,10 +46,14 @@ def view_cart(request):
         # have to convert back to float because
         # session can only store strings
         total += float(v['cost']) * int(v['qty'])
-
+    # calculate tax include
+    tax = total*0.07
+    net_total = total+tax
     return render(request, 'carts/view_cart.template.html', {
         "cart": cart,
-        "total": total
+        "total": total,
+        "tax": tax,
+        "net_total": net_total
     })
 
 

@@ -131,7 +131,6 @@ body, html {
 /*list all book css*/
 #book-list{
     padding:0px 50px 0px 50px;
-    margin: 0 0 0 10px;
     
 }
 .card {
@@ -187,7 +186,7 @@ body, html {
     background-image:url("/static/images/create_books.png");
     background-position: bottom center;
     background-repeat: no-repeat;
-    background-size: 100% 98%;
+    background-size: 100% 99%;
 
 }
 #create_book_form .form-control {
@@ -280,9 +279,20 @@ body, html {
 /* Create author*/
 #create_author{
     padding:10px;
-    background-image: linear-gradient(to bottom, #6a85b6 0%, #bac8e0 100%);
+    color:#528DAD;
 }
-
+/*create author form*/
+#create_author_form{
+    padding: 60px 250px 20px 250px;
+    background-image:url("/static/images/create_author.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+}
+#create_author_form .form-control {
+    border: 3px solid #528DAD;
+    color:#528DAD;
+}
 /*update author page*/
 #update_author{
     padding:10px;

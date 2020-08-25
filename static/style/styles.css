@@ -220,6 +220,8 @@ body, html {
 #allauthors{
     color:#8B008B;
     box-sizing: border-box;
+    height: 100vh;
+    overflow: scroll;
 }  
 
 /*all author banner css*/

@@ -223,7 +223,21 @@ body, html {
 /*update book page*/
 #update_book{
     padding:10px;
-    background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+    color:#E07F1F;
+}
+
+/*update book-form css*/
+#update_book_form{
+    padding: 60px 200px 20px 200px;
+    background-image:url("/static/images/edit_books.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 50% 30%;
+
+}
+#update_book_form .form-control {
+    border: 3px solid #E07F1F;
+    color:black;
 }
 /*delete book page*/
 #delete-book{

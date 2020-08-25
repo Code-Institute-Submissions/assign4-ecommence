@@ -1,17 +1,19 @@
 {% extends 'base.template.html'%} 
-{% load cloudinary %}
-{%load static %} 
 {%block title%}Author - Delete{%endblock%} 
 {%block content%}
-<div id="delete-author">
-    <div class="alert alert-danger">
-        <h1>Deleting {{author.last_name}} {{author.first_name}}</h1>
-        <p>Confirm to Proceed?</p>
-        <form method="POST">
-            {%csrf_token %}
-            <input type="Submit" value="Yes" class="btn btn-danger"/>
-            <a href="{% url 'books'%}" class="btn btn-primary">Cancel</a>
-        </form>
+<div class="container-fluids" id="delete-author">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="alert alert-danger">
+                <h1>Deleting {{author.last_name}} {{author.first_name}}</h1>
+                <p>Confirm to Proceed?</p>
+                <form method="POST">
+                    {%csrf_token %}
+                    <input type="Submit" value="Yes" class="btn btn-danger"/>
+                    <a href="{% url 'books'%}" class="btn btn-primary">Cancel</a>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 {%endblock%}   

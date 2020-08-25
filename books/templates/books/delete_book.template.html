@@ -1,16 +1,19 @@
 {% extends 'base.template.html'%} 
-{%load static %} 
 {%block title%}Book - Delete{%endblock%} 
 {%block content%}
-<div id="delete-book">
-    <div class="alert alert-danger">
-        <h1>Deleting book title : {{book.title}}</h1>
-        <p>Confirm to Proceed?</p>
-        <form method="POST">
-            {%csrf_token %}
-            <input type="Submit" value="Yes" class="btn btn-danger"/>
-            <a href="{% url 'books'%}" class="btn btn-primary">Cancel</a>
-        </form>
+<div class="container-fluids" id="delete-book">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="alert alert-danger">
+                <h1>Deleting book title : {{book.title}}</h1>
+                <p>Confirm to Proceed?</p>
+                <form method="POST">
+                    {%csrf_token %}
+                    <input type="Submit" value="Yes" class="btn btn-danger"/>
+                    <a href="{% url 'books'%}" class="btn btn-primary">Cancel</a>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 {%endblock%}

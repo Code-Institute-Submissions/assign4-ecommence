@@ -242,6 +242,7 @@ body, html {
     padding: 100px;
     font-size: 2rem;
     text-align: center;
+    height: 100vh;
 }
 
 /*all author page*/
@@ -365,8 +366,8 @@ body, html {
     padding: 100px;
     font-size: 2rem;
     text-align: center;
+    height: 100vh;
 }
-
 
 /*view cart page*/
 #cart img{

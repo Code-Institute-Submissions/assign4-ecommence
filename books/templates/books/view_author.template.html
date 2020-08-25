@@ -16,8 +16,8 @@
                     <a class="btn btn-primary btn-sm" href="{% url 'update_author' author_id=author.id %}">Update</a>
                     <a class="btn btn-danger btn-sm" href="{% url 'delete_author' author_id=author.id %}">Delete</a>
                     {% endif %}
-                    <p><strong>Biography</strong> : </p>
-                    <p><em>{{author.biography}}</em></p>
+                    <p><strong>Biography</strong> :<br>
+                    <em>{{author.biography}}</em></p>
                     <p><strong>Books: </strong></p>
                     {%for b in books %}
                         <ul>

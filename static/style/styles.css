@@ -115,15 +115,16 @@ body, html {
 #allbooks{
     color:#3d6378;
     height: 100vh;
+    background-image:url("/static/images/all_books.png");
+    background-position: top; 
+    background-repeat: no-repeat;
+    background-size: 95% 75%;
     
 }
 /*search book css*/
 #book-search{
     padding: 60px 50px 0px 50px;
-    background-image:url("/static/images/all_books.png");
-    background-position: bottom center; 
-    background-repeat: no-repeat;
-    background-size: 99% 80%;
+   
     font-weight: bold;
 
 }

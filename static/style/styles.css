@@ -124,9 +124,7 @@ body, html {
 /*search book css*/
 #book-search{
     padding: 60px 50px 0px 50px;
-   
     font-weight: bold;
-
 }
 
 /*list all book css*/
@@ -286,7 +284,7 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+/*card h3*/
 .card-author h3{
     float: right;
     width: 50%;
@@ -297,7 +295,6 @@ body, html {
 /* Create author*/
 #create_author{
     padding:10px;
-    color:#528DAD;
 }
 /*create author form*/
 #create_author_form{
@@ -313,10 +310,24 @@ body, html {
 }
 /*update author page*/
 #update_author{
-    padding:10px;
-    background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+    padding:10px;  
+    color:#1B5006;
+    font-weight: bold;
 }
 
+/*update book-form css*/
+#update_author_form{
+    padding: 60px 200px 20px 200px; 
+    background-image:url("/static/images/edit_author.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 99% 98%;  
+    color:#18E7D2;
+}
+#update_author_form .form-control {
+    border: 3px solid#1B5006;
+    color:black;
+}
 /*view authors page*/
 #view_author{
     padding-top: 80px;

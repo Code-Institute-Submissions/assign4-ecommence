@@ -44,7 +44,7 @@ def checkout(request):
         # amount in cents unit
         item = {
             "name": book_model.title,
-            "amount": int(book_model.cost * 100*1.07),
+            "amount": int(book_model.cost * 107),
             "quantity": book['qty'],
             "currency": "SGD",
         }

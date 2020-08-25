@@ -146,28 +146,20 @@ body, html {
   flex-wrap: nowrap;
   overflow-x: auto;
 
-    .card-body {
-    flex: 0 0 ;
-  }
 }
 
 .card-body {
   border-radius: 5px;
   background: transparent;
   padding:12px 8px 8px 8px;
-  
+  flex: 0 0 auto;
 }
 .card-body img{
     width: 250px;
     height: 30vh;
 }
 .scrolling-wrapper, .scrolling-wrapper-flexbox {
- 
   width: 100%;
-  -webkit-overflow-scrolling: touch;
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 .card-text{
     text-align: left;

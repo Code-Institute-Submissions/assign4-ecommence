@@ -180,15 +180,16 @@
 
     /*term and conditions */
     #term_conditions{
-        padding: 90px 20px 0px 20px;
+        padding: 90px 20px 20px 20px;
     }
     /*about us*/
     #about_us{
-        padding: 90px 20px 0px 20px;
+        padding: 90px 20px 20px 20px;
+        height: 130vh;
     }
     /*contact us*/
     #contact_us{
-        padding: 90px 20px 0px 20px;
+        padding: 90px 20px 20px 20px;
         }
 }
 /* Media queries - Responsive timeline on screens less than /* Media queries - Responsive timeline on screens less than 413px wide */

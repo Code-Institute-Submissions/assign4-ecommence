@@ -28,7 +28,7 @@ SECRET_KEY = 'puio=xoj&sxx3k21o3o838e_-7sq@l1a-+llj1zm2%c1k&p6*u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*", "ecommence-books.herokuapp.com"]
+ALLOWED_HOSTS = ["ecommence-books.herokuapp.com","*"]
 
 
 # Application definition

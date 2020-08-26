@@ -1,6 +1,215 @@
-/* Media queries - Responsive timeline on screens less than 988px wide */
-@media screen and (max-width: 988px) {
+/* Media queries - Responsive timeline on screens less than /* Media queries - Responsive timeline on screens less than 1209px wide */
+@media screen and (max-width: 1209px) {
+    /*all author page*/
+    .column-author{
+    float: left;
+    width:30%;
+    padding: 5px 5px;
+
+    }
+    .cart-right{ 
+        background-size: 60% 99%; 
+        width: 50%;
+    }
+}
+/* Media queries - Responsive timeline on screens less than /* Media queries - Responsive timeline on screens less than 1021px wide */
+@media screen and (max-width: 1021px) {
+    #home{
+        height: 150vh;
+    }
+    #home .banner-books{
+        padding-top: 80px;
+    }
+    
+    .banner-books-image-content{
+        display:block;
+    }
+    .banner-books-image-content img{
+        width:60%;
+        height: 40%;
+        padding:2px;
+    }
+    .banner-books-image-content p{
+        width:100%;
+        padding:2px;
+        font-size: 1.1rem;
+    }
+    .cart-right{ 
+        background-size: 60% 99%; 
+        width: 50%;
+    }
+    /*Create book-form css*/
+    #create_book_form{
+    padding: 60px;
+    }
+    /*update book-form css*/
+    #update_book_form{
+    padding: 60px;
+    }
+    /*create author form*/
+    #create_author_form{
+    padding: 60px;
+    }
+    /*update book-form css*/
+    #update_author_form{
+    padding: 60px; 
+    }
+    /*view books page*/
+
+    #view_book{
+        height: 130vh;
+        }
+    /*view authors page*/
+    #view_author{
+     height: 130vh;
+        }
+}
+/* Media queries - Responsive timeline on screens less than /* Media queries - Responsive timeline on screens less than 825px wide */
+@media screen and (max-width: 825px) {
+    /*all author page*/
+    .column-author{
+    float: left;
+    width:50%;
+    padding: 5px 5px;
+    
+    }
+    /*cart*/
+    .item-title p{
+        font-size: 0.8rem;
+        padding-top:5px;
+    }
+    /*item quantity*/
+    .item-quantity{
+        font-size: 0.8rem;
+        padding-top:5px;
+    }
+    /*item total cost*/
+    .total-cost p{
+        font-size: 0.8rem;
+        padding-top:5px;
+    }
+    .btn-sm{
+        font-size: 0.6rem;
+    }
+    #contact_us_form{
+    padding: 0px 20px 20px 20px;
+    }
+   
+}
+/* Media queries - Responsive timeline on screens less than /* Media queries - Responsive timeline on screens less than 589px wide */
+@media screen and (max-width: 589px) {
     #home{
         height: 200vh;
     }
+    #home .banner-books{
+        padding: 80px 10px 0px 10px;
+        
+    }
+    /*all books*/
+    #allbooks{
+        height: 140vh;
+        background-size: 85% 55%;
+    }
+    /*all author page*/
+    .column-author{
+    float: left;
+    width:100%;
+    padding: 5px 5px;
+    }
+    .cart-right{ 
+        background-size: 60% 99%; 
+        width: 100%;
+    }
+    #view_book{
+        height: 180vh;
+        }
+    /*view authors page*/
+    #view_author{
+     height: 180vh;
+        }
+}
+/* Media queries - Responsive timeline on screens less than /* Media queries - Responsive timeline on screens less than 570px wide */
+@media screen and (max-width: 570px) {
+    /*view cart page*/
+    #cart{
+    padding:60px 10px 60px 10px;
+    }
+    #cart-basket {
+    width: 100%;
+    height: 100%;
+    }
+}
+/* Media queries - Responsive timeline on screens less than /* Media queries - Responsive timeline on screens less than 480px wide */
+@media screen and (max-width: 480px) {
+    /*all books page*/
+    #book-search{
+    padding: 90px 50px 0px 50px;
+    }
+    /*view cart page*/
+    #cart{
+    padding:90px 10px 60px 10px;
+    }
+    #create_book_form{
+        padding:90px 10px 60px 10px;
+    }
+    /*update book-form css*/
+    #update_book_form{
+        padding:90px 10px 60px 10px;
+    }
+    /*create author form*/
+    #create_author_form{
+        padding:90px 10px 60px 10px;
+    }
+    /*update book-form css*/
+    #update_author_form{
+        padding:90px 10px 60px 10px;
+    }
+    /*all author banner css*/
+    #author-banner{
+    padding: 90px 20px 0px 20px;
+}
+    /*delete book page*/
+    #delete-book{
+        padding: 90px 20px 0px 20px;
+    }
+    /*delete author page*/
+    #delete-author{
+        padding: 90px 20px 0px 20px;
+    }
+    /*info page*/
+
+    /*term and conditions */
+    #term_conditions{
+        padding: 90px 20px 0px 20px;
+    }
+    /*about us*/
+    #about_us{
+        padding: 90px 20px 0px 20px;
+    }
+    /*contact us*/
+    #contact_us{
+        padding: 90px 20px 0px 20px;
+        }
+}
+/* Media queries - Responsive timeline on screens less than /* Media queries - Responsive timeline on screens less than 413px wide */
+@media screen and (max-width: 413px) {
+    /*cart*/
+    .item-title p{
+        font-size: 0.6rem;
+    }
+    /*item quantity*/
+    .item-quantity{
+        font-size: 0.6rem;
+    }
+    /*item total cost*/
+    .total-cost p{
+        font-size: 0.6rem;
+    }
+    .btn-sm{
+        font-size: 0.3rem;
+    }
+    /*cart img*/
+    #cart img{
+    width: 90%;
+}
 }

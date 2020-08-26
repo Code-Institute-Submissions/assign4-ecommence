@@ -332,11 +332,11 @@ body, html {
 }
 /*view authors page*/
 #view_author{
-    padding-top: 80px;
+    padding-top: 100px;
     background-image:url("/static/images/view-authors.jpg");
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: 90% 53%;
+    background-size: 93% 53%;
     color:#135AEC;
     height: 100vh;
     background-color: white;
@@ -399,13 +399,16 @@ body, html {
 }
 /*cart img*/
 #cart img{
+    padding-top: 10px;
     height: 100%;
-    width: 30%;
+    width: 50%;
 }
 .item-image{
     margin:0;
+    padding-top:20px;
     width:25%;
-   
+    display: flex;
+    flex-direction: column-reverse;
 }
 /*item details*/
 .item-title{

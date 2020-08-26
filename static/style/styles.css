@@ -446,7 +446,7 @@ body, html {
     background-image:url("/static/images/cart.jpg");
     background-position: right;
     background-repeat: no-repeat;
-    background-size: 70% 90%;  
+    background-size: 70% 99%;  
 }
 .cart-right ul{
     list-style: none;
@@ -460,5 +460,37 @@ body, html {
 #term_conditions{
     padding:60px;
     background-color: white;
+    color:#3d6378;
+}
+
+/*about us*/
+#about_us{
+    padding:60px;
+    background-color: white;
+    color:#3d6378;
+    height: 100vh;
+}
+
+#about_us_image{
+    background-image:url("/static/images/about_us.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 70% 90%;
+    height: 50vh;
+}
+
+/*contact us*/
+#contact_us{
+    padding:60px;
+    background-color: white;
+    color:#3d6378;
     
+}
+
+/*contact us form*/
+#contact_us_form{
+    padding: 0px 200px 20px 200px;
+}
+#contact_us_form .form-control {
+    border: 3px solid #3d6378;
 }

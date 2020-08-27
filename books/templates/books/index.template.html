@@ -2,6 +2,12 @@
 {%load static %} 
 {%block title%}Books - Home{%endblock%} 
 {%block content%}
+{% if request.user.is_authenticated  %}
+<p class="alert alert-info" role="alert">You are currently logged in as {{request.user}}</p>
+{% else %}
+<p class="alert alert-info" role="alert">Welcome to Cloudberry Grocer, guest</p>
+{% endif %}
+
 <div class="container-fluids" id="home">
     <div class="row">
         <div class="col-sm-6">

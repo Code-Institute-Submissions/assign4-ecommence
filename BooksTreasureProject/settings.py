@@ -23,12 +23,12 @@ load_dotenv(os.path.join(BASE_DIR, '.env'))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'puio=xoj&sxx3k21o3o838e_-7sq@l1a-+llj1zm2%c1k&p6*u'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["ecommence-books.herokuapp.com","*"]
+ALLOWED_HOSTS = ["ecommence-books.herokuapp.com", "*"]
 
 
 # Application definition
@@ -68,10 +68,8 @@ ROOT_URLCONF = 'BooksTreasureProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR,'template', 'allauth')
-        ],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),
+                 os.path.join(BASE_DIR, 'templates', 'allauth')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,30 +77,15 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'carts.contexts.cart_contents'
+                'carts.contexts.cart_contents',
             ],
         },
     },
 ]
 
 
-
 WSGI_APPLICATION = 'BooksTreasureProject.wsgi.application'
 
-# simulate Django to send out emails
-
-TEST_EMAIL = os.environ.get('TEST_EMAIL')
-
-if TEST_EMAIL == 1:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-else:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_USE_TLS = True
-    EMAIL_PORT = 587
-    EMAIL_HOST = "smtp.gmail.com"
-    EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASS")
-    EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-    DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -195,10 +178,26 @@ LOGIN_URL = '/accounts/login/'
 # which url to go to when the user has successfully logged in
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_LOGOUT_REDIRECT_URL = '/'
+
+# simulate Django to send out emails
+
+TEST_EMAIL = os.environ.get('TEST_EMAIL')
+
+if TEST_EMAIL == 1:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = "smtp.gmail.com"
+    EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASS")
+    EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+    DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")
+
 # for flash messages
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
-#stripe
+# stripe
 STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 

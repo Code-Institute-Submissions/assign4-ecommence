@@ -114,12 +114,12 @@ body, html {
 }
 /*all books page*/
 #allbooks{
-    color:#3d6378;
+    color:#172d33;
     height: 100vh;
     background-image:url("/static/images/all_books.png");
     background-position: top; 
     background-repeat: no-repeat;
-    background-size: 95% 75%;
+    background-size: 95% 71%;
     background-color: white;
     
 }

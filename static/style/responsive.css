@@ -57,7 +57,7 @@
     /*view books page*/
 
     #view_book{
-        height: 130vh;
+        height: 150vh;
         }
     /*view authors page*/
     #view_author{
@@ -94,7 +94,10 @@
     #contact_us_form{
     padding: 0px 20px 20px 20px;
     }
-   
+    /*create author form*/
+    #create_author_form{
+        background-size: 70% 50%;
+    }
 }
 /* Media queries - Responsive timeline on screens less than /* Media queries - Responsive timeline on screens less than 589px wide */
 @media screen and (max-width: 589px) {
@@ -121,15 +124,19 @@
         width: 100%;
     }
     #view_book{
-        height: 180vh;
+        height: 200vh;
         }
     /*view authors page*/
     #view_author{
      height: 180vh;
         }
+    /*view cart page*/
+    #cart{ 
+    height: 130vh;
+    }
 }
 /* Media queries - Responsive timeline on screens less than /* Media queries - Responsive timeline on screens less than 570px wide */
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 575px) {
     /*view cart page*/
     #cart{
     padding:60px 10px 60px 10px;
@@ -137,6 +144,10 @@
     #cart-basket {
     width: 100%;
     height: 100%;
+    }
+    /*view page*/
+    #view_book{
+    background-size: 100% 30%;
     }
 }
 /* Media queries - Responsive timeline on screens less than /* Media queries - Responsive timeline on screens less than 480px wide */
@@ -159,6 +170,7 @@
     /*create author form*/
     #create_author_form{
         padding:90px 10px 60px 10px;
+        background-size: 90% 50%;
     }
     /*update book-form css*/
     #update_author_form{
@@ -213,4 +225,24 @@
     #cart img{
     width: 90%;
 }
+}
+
+/* Media queries - Responsive timeline on screens less than /* Media queries - Responsive timeline on screens less than 321px wide */
+@media screen and (max-width: 321px) {
+    /*index page*/
+    #home{
+        height: 220vh;
+    }
+    /*all book page*/
+    #allbooks{
+        height: 160vh;
+    }
+    /*view book page*/
+    #view_book{
+        height: 220vh;
+        }
+    /*view cart page*/
+    #cart{ 
+    height: 160vh;
+    }
 }

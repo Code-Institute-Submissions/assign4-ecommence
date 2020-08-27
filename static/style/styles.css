@@ -194,9 +194,9 @@ body, html {
     height: 100vh;
     color:	#A9565E;
     background-image:url("/static/images/view_books.jpg");
-    background-position: bottom right;
+    background-position: bottom;
     background-repeat: no-repeat;
-    background-size: 50% 50%;
+    background-size: 98% 50%;
     background-color: white;
     
 }

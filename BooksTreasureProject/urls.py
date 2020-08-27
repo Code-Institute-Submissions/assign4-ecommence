@@ -19,8 +19,8 @@ import books.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', books.views.index, name="home"),
     path('accounts/', include('allauth.urls')),
+    path('', books.views.index, name="home"),
     path('books/', include('books.urls')),
     path('carts/', include('carts.urls')),
     path('checkout/', include('checkout.urls')),

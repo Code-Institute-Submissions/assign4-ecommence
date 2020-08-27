@@ -199,3 +199,5 @@ def delete_author(request, author_id):
     else:
         return render(request, 'books/delete_author.template.html', {
             'author': author})
+
+

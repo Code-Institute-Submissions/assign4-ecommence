@@ -119,11 +119,9 @@ ACCOUNT_LOGOUT_REDIRECT_URL = '/'
 
 TEST_EMAIL = os.environ.get('TEST_EMAIL')
 
-<<<<<<< HEAD
-if TEST_EMAIL == "1":
-=======
+
 if TEST_EMAIL ==  "1":
->>>>>>> 04410da1f1470cf96d62833ce972f556d38e457d
+
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

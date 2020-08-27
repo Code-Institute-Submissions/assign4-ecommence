@@ -9,13 +9,13 @@
         <div class="col-sm-12">
             <div id="book-search">
                 <h1>List of Available Books : {{number_of_books}}</h1>
-                <h5>Filter by</h5>
+                <h5>Search by</h5>
                 <form  method="GET">
                     <div class="form-row">
-                        <div class="form-group col-sm-6">
+                        <div class="form-group col-sm-3">
                             {{form.title|as_crispy_field}}
                         </div>
-                        <div class="form-group col-sm-6">
+                        <div class="form-group col-sm-3">
                             {{form.authors|as_crispy_field}}
                         </div>
                     </div>
@@ -23,6 +23,7 @@
                 </form>
                 <p>Scroll to right for view more.</p>
             </div>   
+            
             <!--List of books and search result-->
             <div id="book-list">
                     <div class="card">
@@ -39,7 +40,9 @@
                             {%endfor%} 
                         </div>
                      </div>  
+            
             </div>
+           
         </div>
     </div>
 </div>

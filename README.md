@@ -213,8 +213,11 @@ to MySQL but it has an object oriented database model which are directly support
 A UML diagram to illustrate the relationship between models is drawn and shown [here](https://github.com/skyeoh06/assign4-ecommence/blob/master/docs/assign4_database_UML.pdf).
 
 ## Testing
-Due to the shortage in time, testing is for this project is done manually. The details of testing is documented in 
+Testing is for this project is done manually. The details of testing is documented in 
 [Testing.md](https://github.com/skyeoh06/assign4-ecommence/blob/master/Testing.md)
+Checking on code done on [Html Checker](https://validator.w3.org/nu/) and [Css Checker](https://jigsaw.w3.org/css-validator/) by copy the code to perform the check.
+Mobile responsive check[here](http://ami.responsivedesign.is/)
+All result show no error and mobile responsive.
 
 ## Deployment
 ### Running the project locally.

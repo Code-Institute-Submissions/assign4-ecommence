@@ -88,7 +88,7 @@ The deployed website can be found [here](https://ecommence-books.herokuapp.com/)
 
 ## Wireframes
 The idea of webpage wireframes for this project was completed with AdobeXD tools. The document was saved as pdf format in the
-folder named docs or click on the link [wireframes]().
+folder named docs or click on the link [wireframes](https://github.com/skyeoh06/assign4-ecommence/blob/master/docs/Assign4%20wireframes.pdf).
 
 ## E-Classic Books Shop Features
 ### Index/Home page
@@ -213,7 +213,7 @@ A UML diagram to illustrate the relationship between models is drawn and shown [
 
 ## Testing
 Due to the shortage in time, testing is for this project is done manually. The details of testing is documented in 
-[Testing.md](https://github.com/skyeoh06/assign4-ecommence)
+[Testing.md](https://github.com/skyeoh06/assign4-ecommence/blob/master/Testing.md)
 
 ## Deployment
 ### Running the project locally.

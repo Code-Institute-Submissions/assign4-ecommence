@@ -181,24 +181,23 @@ The technologies used for this project are:
 1. [Django(Release 2.2.14)](https://www.djangoproject.com/start/overview/). Django is a Python Web Framework that encourages rapid
 development and clean design. It is the main requirement of this project.
 2. [Python(Release 3.8.3)](https://www.python.org/downloads/release/python-383/). Python is the programming language that Django 
-is built on.
-3. [HTML5](https://html.spec.whatwg.org/). HTML is the markup language that structures the webpage documents.
+used tools for built on.
+3. [HTML5](https://html.spec.whatwg.org/). HTML is the markup language that structures the base of webpage documents.
 4. [CSS3](https://www.w3.org/TR/2001/WD-css3-roadmap-20010523/). Cascading style sheet is the language that presents and styles 
-the HTML documents.
+the HTML design idea documents.
 5. [Javascript and JQuery](https://developer.oracle.com/sg/javascript/). Javascript and Jquery is used primarily to do DOM 
 manipulation and it is the main engine to serve interactivity and event handling to the webpages.
 6. [Bootstrap (Release 4.5)](https://getbootstrap.com/docs/4.5/getting-started/introduction/). Bootstrap is the layout framework
 used to organize the website's display.
 7. [Gitpod](https://www.gitpod.io/)  
-Gitpod is an online IDE that can be launched in Github. It is used to develop and write the code for this project.
+Gitpod is an online IDE that can be launched in Github. It is used to perform CRUD function  with the code for this project.
 8. [Git and Github](https://github.com/)  
 Github is an online hosting service for software development that utilizes Git for version control.
 9. [Stripe](https://stripe.com/en-sg). Stripe is a financial software service provider that provides the API for software developers
 to integrate payment into their websites and mobile apps.
-10. [Google Fonts](https://fonts.google.com/). Google Fonts Poppins (sans-serif) is used for headings. Google Fonts Bitter (serif)
-is used for body and in paragraph tags. Google Font Delius Swash Caps is used in the navbar brand/logo name.
-11. [Font Awesome](https://fontawesome.com/) Font Awesome Icons are used in this project to give illustrations to some edit and 
+10. [Font Awesome](https://fontawesome.com/) Font Awesome Icons are used in this project to give illustrations to some edit and 
 delete buttons.
+11. [Cloudinary](https://cloudinary.com/) Cloudinary are used in this project to store the image of books and author for database.
 
 ### Django Libraries
 1. [Django-AllAuth](https://django-allauth.readthedocs.io/en/latest/overview.html) is a Django Library that manages authentication, 
@@ -210,7 +209,7 @@ The database used in the project is PostgreSQL. PostgreSQL is an open source Rel
 to MySQL but it has an object oriented database model which are directly supported in database schemas and query language.
 
 ### Database Structure
-A UML diagram to illustrate the relationship between models is drawn and shown [here](https://github.com/Oraclebun/ci-fullstack-project4/blob/master/documents/UML.pdf)
+A UML diagram to illustrate the relationship between models is drawn and shown [here](https://github.com/skyeoh06)
 
 ## Testing
 Due to the shortage in time, testing is for this project is done manually. The details of testing is documented in 
@@ -227,8 +226,7 @@ The steps I went through to run the project locally are as follows:
 4. Go to the personal github pages and start a new repository using the 
 [Code Institute Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
 5. The project folder will be available on the personal github page repository.
-6. At the top right of the personal repository, there is a green coloured Gitpod button like the picture below:
-![Gitpod Button](https://github.com/Oraclebun/ci-fullstack-project4/blob/master/documents/readme_images/Gitpod_link.png)
+6. At the top right of the personal repository, there is a green coloured Gitpod button.
 7. Click on the Gitpod link to open up the development environment for this project in Gitpod.
 8. Once the project has fully loaded in the browser, a Visual Studio Code-like editor with a terminal will be seen.
 9. In the Coding environment terminal, install the following requirements:  
@@ -343,11 +341,20 @@ $ python3 manage.py migrate
 4. Setup superuser account and populate the database with data like the steps described in section "Running the project locally
 12c-12e."
 
+## Bugs and improvements
+1. The signup complete process faced a network error, it will be fixed in the future revisions.
+2. Will be added in a user info database that shown info of past history purchases.
+
 ## Acknowledgements and Credits
 ### E-Classic Book store images 
+1. Image form google [google](https://www.google.com./)
 
 ### Data
+1. Books data from penguin website and goodreads website.
+2. Author data from penguin website and wikipedia website.
 
+### Design ideas
+1. The design idea is inspired by UX UI design 2020 from youtube video.
 
 ### Technical Related Attribution and Acknowledgement:
 1. My teachers in Trent Global College for teaching me programming.

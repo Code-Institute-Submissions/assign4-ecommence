@@ -66,7 +66,7 @@ The deployed website can be found [here](https://ecommence-books.herokuapp.com/)
 8. As user of the website, he/she also can browse all the name of author in the website via [authors](https://ecommence-books.herokuapp.com/books/authors/).
 9. With clicking on the author name, a short biography of the author [views](https://ecommence-books.herokuapp.com/books/view/authors/3)
    can be views by user of the website.
-10. As user of website, he/she can access to cart[cart](https://ecommence-books.herokuapp.com/carts/view) to view the list of cart before complete to 
+10. As user of website, he/she can access to [cart](https://ecommence-books.herokuapp.com/carts/view) to view the list of cart before complete to 
    payment. All purchase required a valid and authenticated user account.
 11. User will be directly to payment process via checkout button in the cart webpage, he/she will be asked to fill in credit card info to 
     complete the transaction of purchase.
@@ -81,9 +81,9 @@ The deployed website can be found [here](https://ecommence-books.herokuapp.com/)
  * add a book [add book](https://ecommence-books.herokuapp.com/books/create)
  * add a author [add author](https://ecommence-books.herokuapp.com/books/authors/create)
  * edit a book [edit book](https://ecommence-books.herokuapp.com/books/update/3)
- * edit a author [edit author](hhttps://ecommence-books.herokuapp.com/books/authors/update/2)
+ * edit a author [edit author](https://ecommence-books.herokuapp.com/books/authors/update/2)
  * delete a book [delete book](https://ecommence-books.herokuapp.com/books/delete/3)
- * delete a author [delete author](hhttps://ecommence-books.herokuapp.com/books/authors/delete/3)
+ * delete a author [delete author](https://ecommence-books.herokuapp.com/books/authors/delete/3)
  * access the database.
 
 ## Wireframes
@@ -169,6 +169,7 @@ a. Form
 
 
 ### add a author Pages
+a. Form 
 * A form with required fields of the books.
 * All the fields in the book required to be fill in in order to successful add in a Author.
 * The Image field is fill with the image url link.
@@ -350,7 +351,7 @@ $ python3 manage.py migrate
 1. Image form google [google](https://www.google.com./)
 
 ### Data
-1. Books data from penguin website and goodreads website.
+1. Books data from penguin website[penguin](https://www.penguin.co.uk/articles/2018/100-must-read-classic-books.html) and goodreads[goodreads](https://www.goodreads.com/?ref=nav_home) website.
 2. Author data from penguin website and wikipedia website.
 
 ### Design ideas

@@ -78,13 +78,13 @@ The deployed website can be found [here](https://ecommence-books.herokuapp.com/)
     
 ### SuperUser Stories
 1. User with superuser account(admin) can 
- a. add a book [add book](https://ecommence-books.herokuapp.com/books/create)
- b. add a author [add author](https://ecommence-books.herokuapp.com/books/authors/create)
- c. edit a book [edit book](https://ecommence-books.herokuapp.com/books/update/3)
- d. edit a author [edit author](hhttps://ecommence-books.herokuapp.com/books/authors/update/2)
- e. delete a book [delete book](https://ecommence-books.herokuapp.com/books/delete/3)
- f. delete a author [delete author](hhttps://ecommence-books.herokuapp.com/books/authors/delete/3)
- g. access the database.
+ * add a book [add book](https://ecommence-books.herokuapp.com/books/create)
+ * add a author [add author](https://ecommence-books.herokuapp.com/books/authors/create)
+ * edit a book [edit book](https://ecommence-books.herokuapp.com/books/update/3)
+ * edit a author [edit author](hhttps://ecommence-books.herokuapp.com/books/authors/update/2)
+ * delete a book [delete book](https://ecommence-books.herokuapp.com/books/delete/3)
+ * delete a author [delete author](hhttps://ecommence-books.herokuapp.com/books/authors/delete/3)
+ * access the database.
 
 ## Wireframes
 The idea of webpage wireframes for this project was completed with AdobeXD tools. The document was saved as pdf format in the
@@ -209,7 +209,7 @@ The database used in the project is PostgreSQL. PostgreSQL is an open source Rel
 to MySQL but it has an object oriented database model which are directly supported in database schemas and query language.
 
 ### Database Structure
-A UML diagram to illustrate the relationship between models is drawn and shown [here](https://github.com/skyeoh06/assign4-ecommence/blob/master/docs/assign4_database_UML.pdf)
+A UML diagram to illustrate the relationship between models is drawn and shown [here](https://github.com/skyeoh06/assign4-ecommence/blob/master/docs/assign4_database_UML.pdf).
 
 ## Testing
 Due to the shortage in time, testing is for this project is done manually. The details of testing is documented in 

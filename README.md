@@ -209,7 +209,7 @@ The database used in the project is PostgreSQL. PostgreSQL is an open source Rel
 to MySQL but it has an object oriented database model which are directly supported in database schemas and query language.
 
 ### Database Structure
-A UML diagram to illustrate the relationship between models is drawn and shown [here](https://github.com/skyeoh06)
+A UML diagram to illustrate the relationship between models is drawn and shown [here](https://github.com/skyeoh06/assign4-ecommence/blob/master/docs/assign4_database_UML.pdf)
 
 ## Testing
 Due to the shortage in time, testing is for this project is done manually. The details of testing is documented in 

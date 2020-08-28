@@ -64,8 +64,8 @@ def all_books(request):
 
         # Get the Author
         if 'authors' in request.GET and request.GET['authors']:
-            author_id = request.GET['authors']
-            query = query & Q(authors=author_id)
+            author_id = request.GET['authors'] 
+            query = query & Q(title__icontains=author_id)
 
         # select all the books
         all_books = Book.objects.all()

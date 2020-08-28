@@ -3,23 +3,30 @@
 # BooksTreasureProject E-Commerce Website
 
 ## Project Objectives
-This website serves the purpose for user who with authenticated account doing online Classic Books purchases beside visit the shop.
-With technologies available nowadays, users can purchase any item with just some simple touch on mobile. Aside from the others book ecommences 
-website, user can drop an email if choice of books not available on the website for owner to arrange the purchase item available online.
-A new user could register for a new account, login, change or reset a password, view his/her profile and logout. 
-The user could also search for books by title or author name.
-A logged in superuser has advantage books CRUD rights which allow him/her to add a books/authors, edit the books/authors's data and even delete it from the database.
+1. This website is created with the purpose to provide Collection of Classic Books ecommence platform for user.
+2. An authenticated user only will be able to complete the purchase online beside visit the shop.
+3. The view of books catalog is design in swipe with finger features which is mobile-friendly.
+4. So, the user can make purchases with any electronic devices once the login to the website.
+5. Responsive to all kind of mobile devices / electronice devices provides the user an easy accss and clear view browsing layout.
+6. A new user could register for a new account, login, change or reset a password, view his/her profile and logout. 
+7. The user can reach us online via contact us [contact us](https://ecommence-books.herokuapp.com/info/contact_us/) with enquiry 
+   about books they wish to look for.
+8. User also can access to Short biography of the author besides browsing the books.
+9. Flash Message will be show on navbar to indicate the success of the process carry out such as add cart process, complete purchase and etc.
+10. A logged in superuser(which is the admin of the website) has advantage books CRUD rights which allow him/her to add a books/authors, 
+   edit the books/authors's data and even delete it from the database.
+11. For quick access without sign up a new account for browsing and testing purpose, please use the existing user account details to
+    proceed:
 
-Please register as a new user or use the following accounts to navigate the website:
+    a) To log in as a user without game CRUD rights, please use the following:
 
-To log in as a user without game CRUD rights, please use the following:
+        Username: vapal14749@banetc.com
+        Password: asd1234567
 
-Username: vapal14749@banetc.com
-Password: asd1234567
-To log in as a user with game CRUD rights, please use the following:
+    b) To log in as a user with game CRUD rights, please use the following:
 
-Username: admin
-Password: sky760131
+        Username: admin
+        Password: sky760131
 
 
 ## Deployed Link
@@ -27,41 +34,49 @@ The deployed website can be found [here](https://ecommence-books.herokuapp.com/)
 
 ## UX/UI
 ### Overview and Colour
-The layout of this website is choosen based on illustrations ideas to give customers an attractive webpage.
-Which aside from mostly ecommence website, the idea of choose image and color is to give customer refreshing look while browsing the page.
-The name of the website as its meaning "treasure classic books", and its purpose for provides all the treasure classic books over the years
-can still be purchased and collect by all classic book lovers.
-Image of illustrations was purposely placed in certain position and size of the page for the unique design effect for users.
-Hence, this is not code error effect.
-A clear and direct navbar for user easily recognized to click on the features.
-Info such as user name and flash message for each success process complete will be display on top of the page.
-This idea is provides user no need to scroll down the page to look for those info as the navbar was placed with fixed-top features.
-Color that choosen provide comfortable view page to users while browsing important info on the webpage.
-Title of the webpage tag along with the webpage content about.
+1. The layout concept behind this website is choose with the idea of illustrations which is different from most current ecommence 
+   website nowadays.
+2. The concept for the color and image that being placed in the website is to provide clean and refreshing look for user.
+3. The Name of the website "TreasureClassicBooks" is explain the purpose of this website doing for the user.
+    "Treasure Classic Books" for those user/customer who loves to collect and read classic books.
+4. Image placed ideas of its position and size is based on design purpose and this is not an page error due to css or files.
+5. Placement fixed top navbar is for user easily access ,recognized and direct to the features in anytime.
+6. Username of user upon successful created and login will be showed on right side of the navbar.
+7. An Icon of cart with the info of how many items in the cart at this moment easily noticed by user on the right side of the navbar(
+    beside the username).
+8. Color of that choosen mainly results calm effect and clear browsing.
+9. On bottom of the website, access on mobile app download link, Get to Know Us and Connect with Us On was placed as a footer of the
+   websites.
+
 
 
 ## User Stories
 ### Basic User Stories
-1. As a customer of the website, he/she will be able to direct to books catalog by just clicking on explore button on the homepage/or
-    [Home](https://ecommence-books.herokuapp.com/) on the navbar. Besides that, popular books among the customer will be show on the home page as well.
-2. As a user of the website, he/she should be able to search for the books available, either by a search on title keyword or by sorted from
-   author name dropdown bar in the [Books](https://ecommence-books.herokuapp.com/books/all).
-3. User can views the books more info by clicking on that book's "title" on the [Books](https://ecommence-books.herokuapp.com/books/all) page. 
-   Highlighted info of the books such as author, price and add cart link are placed together with the list of books column. 
-4. User can views the whole list of books available for purchase by scroll/swipe to the left.
-5. User also can view list of author on [Authors](https://ecommence-books.herokuapp.com/books/all) tab on navbar. Furthermore, user will access author info 
-   by clicking on the author name.
-6. User can easy make purchase by clicking on the "add to cart" button from the list of books page [Books](https://ecommence-books.herokuapp.com/books/all) 
-   or book details page [Views](https://ecommence-books.herokuapp.com/books/view/1/).
-7. User can view their cart by clicking [Cart](https://ecommence-books.herokuapp.com/carts/view) before making payment or the cart icon on the right side of 
-   the navbar with the cart icon image. The total item that have been added showed to user beside the cart icon.
-8. User create the account with SignUp on the navbar.Once Signup and email verified, user can log in to the website with login.
-   Upon successful login, the logout tab will be showed on navbar.
-9. User can understand the company by clicking on [About us](https://ecommence-books.herokuapp.com/info/about_us/).
-10. User can view company terms and conditions by clicking on [Terms and conditions](https://ecommence-books.herokuapp.com/info/terms_and_conditions/).
-11. User can contact us by submit his/her request by clicking on [Contact Us](https://ecommence-books.herokuapp.com/info/contact_us/).
-
-### Additional User Stories
+1. Once user access in the website/app with authenticated account, it will be direct to the home page [Home](https://ecommence-books.herokuapp.com/).
+   In this page, Info about popular books among the customer can be seen.
+2. The fixed top navbar provides info of shop icon and name, webpage feature, username, cart info and success flash message.
+3. A users access the all books collection via [Books](https://ecommence-books.herokuapp.com/books/all) and browse with only swipe 
+  to the right with finger touch.
+4. A Users can directly search for the available books, either by a search on title keyword or by sorted from author name dropdown bar.
+5. As the user of the websites, the info about books in the collection list comes with title, author, price and add to cart button for 
+  directly purchase access.
+6. The user of the websites can access the more details of the book by clicking on its title.
+7. User of the website also can carried on with add cart process while browsing more info about the books in view page
+   [view](https://ecommence-books.herokuapp.com/books/view/2/).
+8. As user of the website, he/she also can browse all the name of author in the website via [authors](https://ecommence-books.herokuapp.com/books/authors/).
+9. With clicking on the author name, a short biography of the author [views](https://ecommence-books.herokuapp.com/books/view/authors/3)
+   can be views by user of the website.
+10. As user of website, he/she can access to cart[cart](https://ecommence-books.herokuapp.com/carts/view) to view the list of cart before complete to 
+   payment. All purchase required a valid and authenticated user account.
+11. User will be directly to payment process via checkout button in the cart webpage, he/she will be asked to fill in credit card info to 
+    complete the transaction of purchase.
+12. As user of the websites, he/she can access the info about the shop as below:
+    a. Available on Apps link for iphone and googleplay users.
+    b. Get to Know Us link for [About us](https://ecommence-books.herokuapp.com/info/about_us/), [Terms and conditions](https://ecommence-books.herokuapp.com/info/terms_and_conditions/),
+       [Contact Us](https://ecommence-books.herokuapp.com/info/contact_us/).
+    c. Connect With Us for Instagram , pinterest and Github(this is for website creator owner).
+    
+### SuperUser Stories
 1. User with superuser account(admin) can 
  a. add a book [add book](https://ecommence-books.herokuapp.com/books/create)
  b. add a author [add author](https://ecommence-books.herokuapp.com/books/authors/create)
@@ -69,16 +84,75 @@ Title of the webpage tag along with the webpage content about.
  d. edit a author [edit author](hhttps://ecommence-books.herokuapp.com/books/authors/update/2)
  e. delete a book [delete book](https://ecommence-books.herokuapp.com/books/delete/3)
  f. delete a author [delete author](hhttps://ecommence-books.herokuapp.com/books/authors/delete/3)
+ g. access the database.
+
 ## Wireframes
+The idea of webpage wireframes for this project was completed with AdobeXD tools. The document was saved as pdf format in the
+folder named docs or click on the link [wireframes]().
 
 ## E-Classic Books Shop Features
 ### Index/Home page
+a. Features for user attraction
+* Popular books list with image and brief description on the right side of the webpage and easy to browsing with touch and scroll up.
+* An Explore button which direct the user to the books collection.
+b. Features for user navigation
+* A fixed top clear navbar allow users to navigate to Home, Books, Authors, carts, Login/signup/logout.
+c. Features for user notification
+* Flash message will be show on the navbar allow user to be notify for successful process such login, logout, add to cart, 
+   payment complete, etc
+d. Features for user info and shopping cart
+* Username and Number of item in the cart show on the right of the navbar.
+
+e. Hidden features
+* if the logging as superuser/admin, navigation to add a book and add a author can be seen on navbar menu.
+* Only logging as superuser/admin, can perform CRUD functions for books and authors.
 
 ### Books page
+a. Search Features
+* Two search type input can be choose for search purpose by users.
+* Option One is user can keyin a keyword related to the book title.
+* Option Two is user can browse the Author dropdown bar of current complete list of available author name.
+
+b. Card display
+* Touch and swipe action to for user to browse all the books in the collection.
+* The search result of the query will be display on this card.
+* Each books card comes with its own info such as title, author, price and individual add to cart button.
+* User can click on the books title for more info about that selected books to directly to the books view page.
+* The selected books can be added to cart directly via the individual add to cart button.
+
+### Book View pages
+a. Info Presentation
+* The info of books that presents in this page such as book image, title, Author , price, ISBN, Date published, length, quotes and description.
+* The individual add to cart button also place in the view page for user easy access add to cart without back to all books collection 
+  page.
+
+b.Hidden features
+* Only with logging as superuser/admin, Update and edit button function can seen and access.
+
 
 ### Authors Pages
+a. Column card
+* The list of all author can be view in column card display with their name as the link to the biography info page.
+* The use will be direct to author view page by click on the author name.
+
+### Author View pages
+a. Info Presentation
+* The info about author that presents in this page such as Author image, Name , biography and his/her published book title list.
+
+b.Hidden features
+* Only with logging as superuser/admin, Update and edit button function can seen and access.
 
 ### Cart Page
+a. Info Presentation
+* The info that presents in this page are such as Book image, quantity , title , and total price.
+* User can remove the item and change the item quantity(Updated button).
+* The List of all item in the cart is presented in a table layout.
+* Summary of total Payment for the Purchase are showed at the bottom left of the page.
+
+b. Check process
+* The Checkout button placed below of the summary of total purchase cost.
+* It will redirect to credit card payment procees via click on the checkout button.
+
 
 ### Login/Logout/SignUp Page
 * The account management pages are managed by Django-AllAuth
@@ -86,12 +160,21 @@ Title of the webpage tag along with the webpage content about.
 
 ## Superuser additional access page 
 ### add a book Page
+a. Form 
+* A form with required fields of the books.
+* All the fields in the book required to be fill in in order to successful add in a Book.
+* Format for key in date in published field is YYYY-MM-DD.
+* The Image field is fill with the image url link.
+* Submission completed with Click on the Submit button.
+
 
 ### add a author Pages
+* A form with required fields of the books.
+* All the fields in the book required to be fill in in order to successful add in a Author.
+* The Image field is fill with the image url link.
+* Submission completed with Click on the Submit button.
 
 
-
-### NavBar Links
 
 ## Technologies Used
 The technologies used for this project are:
